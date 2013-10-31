@@ -46,10 +46,12 @@
     SGFocusImageItem *item2 = [[SGFocusImageItem alloc] initWithTitle:@"title2" image:[UIImage imageNamed:@"2.jpg"] tag:1002];
     SGFocusImageItem *item3 = [[SGFocusImageItem alloc] initWithTitle:@"title3" image:[UIImage imageNamed:@"3.jpg"] tag:1003];
     
-    SGFocusImageFrame *imageFrame = [[SGFocusImageFrame alloc] initWithFrame:[[UIScreen mainScreen] bounds] delegate:self focusImageItems:item1,item2,item3, nil];
+    SGFocusImageFrame *imageFrame = [[SGFocusImageFrame alloc] initWithFrame:CGRectMake(0, 64, 320, 411) delegate:self focusImageItems:item1,item2,item3, nil];
     imageFrame.switchTimeInterval = 5.f;
     
-    [[[[UIApplication sharedApplication] delegate] window] addSubview:imageFrame];
+    [self.view addSubview:imageFrame];
+    
+//    [[[[UIApplication sharedApplication] delegate] window] addSubview:imageFrame];
 }
 #pragma 实现 SGFocusImageFrameDelegate Action
 - (void)foucusImageFrame:(SGFocusImageFrame *)imageFrame didSelectItem:(SGFocusImageItem *)item

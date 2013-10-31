@@ -1,18 +1,18 @@
 //
-//  TIMETASpiritViewController.m
+//  TIMEAlbumCollectionViewController.m
 //  TIME61
 //
-//  Created by caizhibin on 13-10-30.
+//  Created by caizhibin on 13-10-31.
 //  Copyright (c) 2013年 caizhibin. All rights reserved.
 //
 
-#import "TIMETASpiritViewController.h"
+#import "TIMEAlbumCollectionViewController.h"
 
-@interface TIMETASpiritViewController ()
+@interface TIMEAlbumCollectionViewController ()
 
 @end
 
-@implementation TIMETASpiritViewController
+@implementation TIMEAlbumCollectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

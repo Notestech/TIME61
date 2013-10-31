@@ -4,29 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" customClass="TIMEViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RnS-Wp-07q"/>
-                        <viewControllerLayoutGuide type="bottom" id="umc-Rr-bG8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-787" y="-162"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fZG-dN-wQw">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Onr-sF-3Jv" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="QMv-V9-akj">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -34,15 +16,15 @@
                     </tabBar>
                     <connections>
                         <segue destination="lYp-X7-31o" kind="relationship" relationship="viewControllers" id="4Bt-Mx-QWl"/>
-                        <segue destination="CKa-nL-Dnc" kind="relationship" relationship="viewControllers" id="PsJ-x3-P5e"/>
-                        <segue destination="XFe-wi-Rdo" kind="relationship" relationship="viewControllers" id="C6y-2F-3jU"/>
-                        <segue destination="VKF-E2-n6e" kind="relationship" relationship="viewControllers" id="WYo-hS-JI9"/>
-                        <segue destination="hQp-jW-d1Y" kind="relationship" relationship="viewControllers" id="nI1-Iw-YvP"/>
+                        <segue destination="Hc7-au-s8R" kind="relationship" relationship="viewControllers" id="ePG-vn-2em"/>
+                        <segue destination="XFe-wi-Rdo" kind="relationship" relationship="viewControllers" id="hMC-TL-zpr"/>
+                        <segue destination="VKF-E2-n6e" kind="relationship" relationship="viewControllers" id="9p6-5z-qVH"/>
+                        <segue destination="hQp-jW-d1Y" kind="relationship" relationship="viewControllers" id="iVY-O6-6Et"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDJ-A8-WQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-221" y="-162"/>
+            <point key="canvasLocation" x="-1589" y="-454"/>
         </scene>
         <!--Navigation Controller - 首页-->
         <scene sceneID="VAp-73-cy3">
@@ -58,9 +40,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fk-et-NR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="-1587"/>
+            <point key="canvasLocation" x="-510" y="-1239"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home View Controller - 时光网-->
         <scene sceneID="FX3-Fa-9EX">
             <objects>
                 <viewController id="Zbf-Bz-ufH" customClass="TIMEHomeViewController" sceneMemberID="viewController">
@@ -82,44 +64,69 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="foN-aX-qGl"/>
+                    <navigationItem key="navigationItem" title="时光网" id="foN-aX-qGl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yd-CW-xj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-1587"/>
+            <point key="canvasLocation" x="382" y="-1239"/>
         </scene>
-        <!--Wall View Controller-->
-        <scene sceneID="cfX-AR-4dN">
+        <!--Album Collection View Controller-->
+        <scene sceneID="bsj-xl-2rd">
             <objects>
-                <viewController id="cDS-Qd-LCE" customClass="TIMEWallViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="AlbumCollection" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CNM-Ra-HhV" customClass="TIMEAlbumCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="diP-aE-jtg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qd5-Yx-17L">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kGJ-lH-VkL">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="CNM-Ra-HhV" id="zCI-Ed-NZi"/>
+                            <outlet property="delegate" destination="CNM-Ra-HhV" id="MOU-XI-RTR"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igl-8l-BcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-804"/>
+        </scene>
+        <!--Wall View Controller - 画墙-->
+        <scene sceneID="QjJ-CL-Ual">
+            <objects>
+                <viewController id="Hc7-au-s8R" customClass="TIMEWallViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jse-Sm-9Dk"/>
-                        <viewControllerLayoutGuide type="bottom" id="LAu-8T-fIp"/>
+                        <viewControllerLayoutGuide type="top" id="KEz-qf-8Og"/>
+                        <viewControllerLayoutGuide type="bottom" id="YYg-kh-sl9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="di0-ec-pXV">
+                    <view key="view" contentMode="scaleToFill" id="Wup-Oa-ofG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzn-Zf-0tO">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="画墙" id="xML-ne-iWW"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vpa-ls-y16"/>
+                    <tabBarItem key="tabBarItem" title="画墙" image="TabBarItem_wall" id="7uh-lY-l02"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RsX-VM-VRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEe-sg-drv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-898"/>
+            <point key="canvasLocation" x="-74" y="-804"/>
         </scene>
-        <!--Spirit View Controller-->
+        <!--Spirits View Controller - TA.精灵-->
         <scene sceneID="m2r-jy-eYb">
             <objects>
-                <viewController id="taU-U9-DNs" customClass="TIMETASpiritViewController" sceneMemberID="viewController">
+                <viewController id="taU-U9-DNs" customClass="TIMESpiritsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RzV-sO-Sk3"/>
                         <viewControllerLayoutGuide type="bottom" id="Fql-UY-qfF"/>
@@ -138,13 +145,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="T2v-7O-OEQ"/>
+                    <navigationItem key="navigationItem" title="TA.精灵" id="T2v-7O-OEQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8Z-6e-OFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-162"/>
+            <point key="canvasLocation" x="382" y="-354"/>
         </scene>
-        <!--Toys View Controller-->
+        <!--Toys View Controller - 玩具定制-->
         <scene sceneID="AUZ-8M-akP">
             <objects>
                 <viewController id="93L-YI-gyv" customClass="TIMEToysViewController" sceneMemberID="viewController">
@@ -166,16 +173,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k2e-1p-JjO"/>
+                    <navigationItem key="navigationItem" title="玩具定制" id="k2e-1p-JjO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0O-uV-Ihm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="627"/>
+            <point key="canvasLocation" x="772" y="111"/>
         </scene>
-        <!--My Center View Controller-->
+        <!--Mypage View Controller - 我的主页-->
         <scene sceneID="3ih-On-RHZ">
             <objects>
-                <viewController id="N4a-Ic-CCm" customClass="TIMEMyCenterViewController" sceneMemberID="viewController">
+                <viewController id="N4a-Ic-CCm" customClass="TIMEMypageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uhM-DT-w9x"/>
                         <viewControllerLayoutGuide type="bottom" id="49H-8c-KDK"/>
@@ -194,27 +201,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zaw-vI-X8D"/>
+                    <navigationItem key="navigationItem" title="我的主页" id="Zaw-vI-X8D"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MtY-ex-SGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="1402"/>
-        </scene>
-        <!--Navigation Controller - 画墙-->
-        <scene sceneID="ukp-0y-UYw">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="CKa-nL-Dnc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="画墙" image="TabBarItem_wall" id="QBC-tT-pAs"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7TU-mI-iX7">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="cDS-Qd-LCE" kind="relationship" relationship="rootViewController" id="qPA-Pd-WtI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wLO-uS-ydb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="498" y="-898"/>
+            <point key="canvasLocation" x="382" y="534"/>
         </scene>
         <!--Navigation Controller - TA.精灵-->
         <scene sceneID="vNC-Va-Jta">
@@ -230,7 +221,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IM-7k-dkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="-162"/>
+            <point key="canvasLocation" x="-510" y="-354"/>
         </scene>
         <!--Navigation Controller - 玩具定制-->
         <scene sceneID="4k1-JS-wCf">
@@ -246,7 +237,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVL-V9-2xL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="627"/>
+            <point key="canvasLocation" x="-98" y="111"/>
         </scene>
         <!--Navigation Controller - 我的主页-->
         <scene sceneID="FLC-Hl-nrO">
@@ -262,7 +253,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MA1-uJ-6Kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="498" y="1402"/>
+            <point key="canvasLocation" x="-510" y="534"/>
         </scene>
     </scenes>
     <resources>

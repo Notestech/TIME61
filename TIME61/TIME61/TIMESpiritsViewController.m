@@ -1,18 +1,18 @@
 //
-//  TIMEMyCenterViewController.m
+//  TIMESpiritsViewController.m
 //  TIME61
 //
-//  Created by caizhibin on 13-10-30.
+//  Created by caizhibin on 13-10-31.
 //  Copyright (c) 2013年 caizhibin. All rights reserved.
 //
 
-#import "TIMEMyCenterViewController.h"
+#import "TIMESpiritsViewController.h"
 
-@interface TIMEMyCenterViewController ()
+@interface TIMESpiritsViewController ()
 
 @end
 
-@implementation TIMEMyCenterViewController
+@implementation TIMESpiritsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

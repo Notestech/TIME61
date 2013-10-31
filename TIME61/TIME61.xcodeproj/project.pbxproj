@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3A812C51821BB0000888507 /* TIMESpiritsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A812C41821BB0000888507 /* TIMESpiritsViewController.m */; };
+		C3A8130D1821D9EF00888507 /* TIMEMypageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8130C1821D9EF00888507 /* TIMEMypageViewController.m */; };
+		C3A813361821DDFF00888507 /* TIMEAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A813351821DDFF00888507 /* TIMEAlbumViewController.m */; };
+		C3A813391821E34500888507 /* TIMEWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A813381821E34500888507 /* TIMEWallViewController.m */; };
+		C3A81428182262C100888507 /* TIMECell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A81427182262C100888507 /* TIMECell.m */; };
+		C3A8147A182272D600888507 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A81479182272D600888507 /* ViewPagerController.m */; };
+		C3A8147D18227CBF00888507 /* TIMEAlbumCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8147C18227CBF00888507 /* TIMEAlbumCollectionViewController.m */; };
 		C3DBA87A18212B8600A7CD8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DBA87918212B8600A7CD8C /* Foundation.framework */; };
 		C3DBA87C18212B8600A7CD8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DBA87B18212B8600A7CD8C /* CoreGraphics.framework */; };
 		C3DBA87E18212B8600A7CD8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DBA87D18212B8600A7CD8C /* UIKit.framework */; };
@@ -21,10 +28,7 @@
 		C3DBA89B18212B8700A7CD8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DBA87D18212B8600A7CD8C /* UIKit.framework */; };
 		C3DBA8A318212B8700A7CD8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA8A118212B8700A7CD8C /* InfoPlist.strings */; };
 		C3DBA8A518212B8700A7CD8C /* TIME61Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8A418212B8700A7CD8C /* TIME61Tests.m */; };
-		C3DBA8B518212CE300A7CD8C /* TIMEMyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8B418212CE300A7CD8C /* TIMEMyCenterViewController.m */; };
 		C3DBA8B818212CF300A7CD8C /* TIMEToysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8B718212CF300A7CD8C /* TIMEToysViewController.m */; };
-		C3DBA8BB18212D0B00A7CD8C /* TIMETASpiritViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8BA18212D0B00A7CD8C /* TIMETASpiritViewController.m */; };
-		C3DBA8BE18212D1700A7CD8C /* TIMEWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8BD18212D1700A7CD8C /* TIMEWallViewController.m */; };
 		C3DBA8C118212D2300A7CD8C /* TIMEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8C018212D2300A7CD8C /* TIMEHomeViewController.m */; };
 		C3DBA8DE18212DFD00A7CD8C /* SGFocusImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA8DD18212DFD00A7CD8C /* SGFocusImageFrame.m */; };
 		C3DBA8E218213AD300A7CD8C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA8DF18213AD300A7CD8C /* 1.jpg */; };
@@ -43,6 +47,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3A812C31821BB0000888507 /* TIMESpiritsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMESpiritsViewController.h; sourceTree = "<group>"; };
+		C3A812C41821BB0000888507 /* TIMESpiritsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMESpiritsViewController.m; sourceTree = "<group>"; };
+		C3A8130B1821D9EF00888507 /* TIMEMypageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEMypageViewController.h; sourceTree = "<group>"; };
+		C3A8130C1821D9EF00888507 /* TIMEMypageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEMypageViewController.m; sourceTree = "<group>"; };
+		C3A813341821DDFF00888507 /* TIMEAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEAlbumViewController.h; sourceTree = "<group>"; };
+		C3A813351821DDFF00888507 /* TIMEAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEAlbumViewController.m; sourceTree = "<group>"; };
+		C3A813371821E34500888507 /* TIMEWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEWallViewController.h; sourceTree = "<group>"; };
+		C3A813381821E34500888507 /* TIMEWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEWallViewController.m; sourceTree = "<group>"; };
+		C3A81426182262C100888507 /* TIMECell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMECell.h; sourceTree = "<group>"; };
+		C3A81427182262C100888507 /* TIMECell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMECell.m; sourceTree = "<group>"; };
+		C3A81478182272D600888507 /* ViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewPagerController.h; sourceTree = "<group>"; };
+		C3A81479182272D600888507 /* ViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewPagerController.m; sourceTree = "<group>"; };
+		C3A8147B18227CBF00888507 /* TIMEAlbumCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEAlbumCollectionViewController.h; sourceTree = "<group>"; };
+		C3A8147C18227CBF00888507 /* TIMEAlbumCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEAlbumCollectionViewController.m; sourceTree = "<group>"; };
 		C3DBA87618212B8600A7CD8C /* TIME61.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TIME61.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DBA87918212B8600A7CD8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C3DBA87B18212B8600A7CD8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,14 +80,8 @@
 		C3DBA8A018212B8700A7CD8C /* TIME61Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TIME61Tests-Info.plist"; sourceTree = "<group>"; };
 		C3DBA8A218212B8700A7CD8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3DBA8A418212B8700A7CD8C /* TIME61Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TIME61Tests.m; sourceTree = "<group>"; };
-		C3DBA8B318212CE300A7CD8C /* TIMEMyCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEMyCenterViewController.h; sourceTree = "<group>"; };
-		C3DBA8B418212CE300A7CD8C /* TIMEMyCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEMyCenterViewController.m; sourceTree = "<group>"; };
 		C3DBA8B618212CF300A7CD8C /* TIMEToysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEToysViewController.h; sourceTree = "<group>"; };
 		C3DBA8B718212CF300A7CD8C /* TIMEToysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEToysViewController.m; sourceTree = "<group>"; };
-		C3DBA8B918212D0B00A7CD8C /* TIMETASpiritViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMETASpiritViewController.h; sourceTree = "<group>"; };
-		C3DBA8BA18212D0B00A7CD8C /* TIMETASpiritViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMETASpiritViewController.m; sourceTree = "<group>"; };
-		C3DBA8BC18212D1700A7CD8C /* TIMEWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEWallViewController.h; sourceTree = "<group>"; };
-		C3DBA8BD18212D1700A7CD8C /* TIMEWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEWallViewController.m; sourceTree = "<group>"; };
 		C3DBA8BF18212D2300A7CD8C /* TIMEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEHomeViewController.h; sourceTree = "<group>"; };
 		C3DBA8C018212D2300A7CD8C /* TIMEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEHomeViewController.m; sourceTree = "<group>"; };
 		C3DBA8DC18212DFD00A7CD8C /* SGFocusImageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFocusImageFrame.h; sourceTree = "<group>"; };
@@ -103,6 +115,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3A8130A1821D9BD00888507 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				C3A8130B1821D9EF00888507 /* TIMEMypageViewController.h */,
+				C3A8130C1821D9EF00888507 /* TIMEMypageViewController.m */,
+			);
+			name = Mypage;
+			sourceTree = "<group>";
+		};
+		C3A81477182272D600888507 /* ICViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				C3A81478182272D600888507 /* ViewPagerController.h */,
+				C3A81479182272D600888507 /* ViewPagerController.m */,
+			);
+			path = ICViewPager;
+			sourceTree = "<group>";
+		};
 		C3DBA86D18212B8600A7CD8C = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +166,7 @@
 		C3DBA87F18212B8600A7CD8C /* TIME61 */ = {
 			isa = PBXGroup;
 			children = (
+				C3A8130A1821D9BD00888507 /* Mypage */,
 				C3DBA88818212B8600A7CD8C /* TIMEAppDelegate.h */,
 				C3DBA88918212B8600A7CD8C /* TIMEAppDelegate.m */,
 				C3DBA88B18212B8600A7CD8C /* Main.storyboard */,
@@ -144,10 +175,10 @@
 				C3DBA89118212B8700A7CD8C /* Images.xcassets */,
 				C3DBA8AE18212BB200A7CD8C /* Home */,
 				C3DBA8AF18212BD400A7CD8C /* Wall */,
-				C3DBA8B018212BE100A7CD8C /* TASpirit */,
 				C3DBA8B118212C3B00A7CD8C /* Toys */,
-				C3DBA8B218212C5100A7CD8C /* MyCenter */,
 				C3DBA88018212B8600A7CD8C /* Supporting Files */,
+				C3A812C31821BB0000888507 /* TIMESpiritsViewController.h */,
+				C3A812C41821BB0000888507 /* TIMESpiritsViewController.m */,
 			);
 			path = TIME61;
 			sourceTree = "<group>";
@@ -195,19 +226,16 @@
 		C3DBA8AF18212BD400A7CD8C /* Wall */ = {
 			isa = PBXGroup;
 			children = (
-				C3DBA8BC18212D1700A7CD8C /* TIMEWallViewController.h */,
-				C3DBA8BD18212D1700A7CD8C /* TIMEWallViewController.m */,
+				C3A813371821E34500888507 /* TIMEWallViewController.h */,
+				C3A813381821E34500888507 /* TIMEWallViewController.m */,
+				C3A813341821DDFF00888507 /* TIMEAlbumViewController.h */,
+				C3A813351821DDFF00888507 /* TIMEAlbumViewController.m */,
+				C3A8147B18227CBF00888507 /* TIMEAlbumCollectionViewController.h */,
+				C3A8147C18227CBF00888507 /* TIMEAlbumCollectionViewController.m */,
+				C3A81426182262C100888507 /* TIMECell.h */,
+				C3A81427182262C100888507 /* TIMECell.m */,
 			);
 			name = Wall;
-			sourceTree = "<group>";
-		};
-		C3DBA8B018212BE100A7CD8C /* TASpirit */ = {
-			isa = PBXGroup;
-			children = (
-				C3DBA8B918212D0B00A7CD8C /* TIMETASpiritViewController.h */,
-				C3DBA8BA18212D0B00A7CD8C /* TIMETASpiritViewController.m */,
-			);
-			name = TASpirit;
 			sourceTree = "<group>";
 		};
 		C3DBA8B118212C3B00A7CD8C /* Toys */ = {
@@ -217,15 +245,6 @@
 				C3DBA8B718212CF300A7CD8C /* TIMEToysViewController.m */,
 			);
 			name = Toys;
-			sourceTree = "<group>";
-		};
-		C3DBA8B218212C5100A7CD8C /* MyCenter */ = {
-			isa = PBXGroup;
-			children = (
-				C3DBA8B318212CE300A7CD8C /* TIMEMyCenterViewController.h */,
-				C3DBA8B418212CE300A7CD8C /* TIMEMyCenterViewController.m */,
-			);
-			name = MyCenter;
 			sourceTree = "<group>";
 		};
 		C3DBA8C218212DF600A7CD8C /* Images */ = {
@@ -241,6 +260,7 @@
 		C3DBA8D918212DFD00A7CD8C /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				C3A81477182272D600888507 /* ICViewPager */,
 				C3DBA8DA18212DFD00A7CD8C /* SDWebImage */,
 				C3DBA8DB18212DFD00A7CD8C /* SGFocusImageFrame */,
 			);
@@ -323,6 +343,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = C3DBA86D18212B8600A7CD8C;
 			productRefGroup = C3DBA87718212B8600A7CD8C /* Products */;
@@ -364,15 +385,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3DBA8B518212CE300A7CD8C /* TIMEMyCenterViewController.m in Sources */,
+				C3A812C51821BB0000888507 /* TIMESpiritsViewController.m in Sources */,
+				C3A8130D1821D9EF00888507 /* TIMEMypageViewController.m in Sources */,
 				C3DBA89018212B8600A7CD8C /* TIMEViewController.m in Sources */,
+				C3A813391821E34500888507 /* TIMEWallViewController.m in Sources */,
 				C3DBA8C118212D2300A7CD8C /* TIMEHomeViewController.m in Sources */,
 				C3DBA8DE18212DFD00A7CD8C /* SGFocusImageFrame.m in Sources */,
+				C3A813361821DDFF00888507 /* TIMEAlbumViewController.m in Sources */,
+				C3A81428182262C100888507 /* TIMECell.m in Sources */,
 				C3DBA88618212B8600A7CD8C /* main.m in Sources */,
 				C3DBA8B818212CF300A7CD8C /* TIMEToysViewController.m in Sources */,
+				C3A8147A182272D600888507 /* ViewPagerController.m in Sources */,
 				C3DBA88A18212B8600A7CD8C /* TIMEAppDelegate.m in Sources */,
-				C3DBA8BB18212D0B00A7CD8C /* TIMETASpiritViewController.m in Sources */,
-				C3DBA8BE18212D1700A7CD8C /* TIMEWallViewController.m in Sources */,
+				C3A8147D18227CBF00888507 /* TIMEAlbumCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +606,7 @@
 				C3DBA8AA18212B8700A7CD8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3DBA8AB18212B8700A7CD8C /* Build configuration list for PBXNativeTarget "TIME61Tests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +615,7 @@
 				C3DBA8AD18212B8700A7CD8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
