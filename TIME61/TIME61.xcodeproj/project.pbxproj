@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C301E03B182325F0004D7F7F /* 1_flow.png in Resources */ = {isa = PBXBuildFile; fileRef = C301E039182325F0004D7F7F /* 1_flow.png */; };
+		C301E03C182325F0004D7F7F /* 2_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = C301E03A182325F0004D7F7F /* 2_detail.png */; };
+		C301E03E18232805004D7F7F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C301E03D18232805004D7F7F /* ImageIO.framework */; };
+		C301E05218232A44004D7F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA88B18212B8600A7CD8C /* Main.storyboard */; };
+		C301E05418232A94004D7F7F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C301E05318232A94004D7F7F /* MapKit.framework */; };
+		C3A7E8E418229A67002E3C1C /* CartonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A7E8E318229A67002E3C1C /* CartonCell.xib */; };
 		C3A812C51821BB0000888507 /* TIMESpiritsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A812C41821BB0000888507 /* TIMESpiritsViewController.m */; };
 		C3A8130D1821D9EF00888507 /* TIMEMypageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A8130C1821D9EF00888507 /* TIMEMypageViewController.m */; };
-		C3A813361821DDFF00888507 /* TIMEAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A813351821DDFF00888507 /* TIMEAlbumViewController.m */; };
 		C3A813391821E34500888507 /* TIMEWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A813381821E34500888507 /* TIMEWallViewController.m */; };
 		C3A81428182262C100888507 /* TIMECell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A81427182262C100888507 /* TIMECell.m */; };
 		C3A8147A182272D600888507 /* ViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A81479182272D600888507 /* ViewPagerController.m */; };
@@ -20,7 +25,6 @@
 		C3DBA88418212B8600A7CD8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA88218212B8600A7CD8C /* InfoPlist.strings */; };
 		C3DBA88618212B8600A7CD8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA88518212B8600A7CD8C /* main.m */; };
 		C3DBA88A18212B8600A7CD8C /* TIMEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA88918212B8600A7CD8C /* TIMEAppDelegate.m */; };
-		C3DBA88D18212B8600A7CD8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA88B18212B8600A7CD8C /* Main.storyboard */; };
 		C3DBA89018212B8600A7CD8C /* TIMEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DBA88F18212B8600A7CD8C /* TIMEViewController.m */; };
 		C3DBA89218212B8700A7CD8C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA89118212B8700A7CD8C /* Images.xcassets */; };
 		C3DBA89918212B8700A7CD8C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DBA89818212B8700A7CD8C /* XCTest.framework */; };
@@ -34,6 +38,7 @@
 		C3DBA8E218213AD300A7CD8C /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA8DF18213AD300A7CD8C /* 1.jpg */; };
 		C3DBA8E318213AD300A7CD8C /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA8E018213AD300A7CD8C /* 2.jpg */; };
 		C3DBA8E418213AD300A7CD8C /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA8E118213AD300A7CD8C /* 3.jpg */; };
+		C3F27BD018232F8100206FFF /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = C3F27BCF18232F8100206FFF /* 01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C301E039182325F0004D7F7F /* 1_flow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_flow.png; sourceTree = "<group>"; };
+		C301E03A182325F0004D7F7F /* 2_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_detail.png; sourceTree = "<group>"; };
+		C301E03D18232805004D7F7F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C301E05318232A94004D7F7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C3A7E8E318229A67002E3C1C /* CartonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartonCell.xib; sourceTree = "<group>"; };
 		C3A812C31821BB0000888507 /* TIMESpiritsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMESpiritsViewController.h; sourceTree = "<group>"; };
 		C3A812C41821BB0000888507 /* TIMESpiritsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMESpiritsViewController.m; sourceTree = "<group>"; };
 		C3A8130B1821D9EF00888507 /* TIMEMypageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEMypageViewController.h; sourceTree = "<group>"; };
 		C3A8130C1821D9EF00888507 /* TIMEMypageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEMypageViewController.m; sourceTree = "<group>"; };
-		C3A813341821DDFF00888507 /* TIMEAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEAlbumViewController.h; sourceTree = "<group>"; };
-		C3A813351821DDFF00888507 /* TIMEAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEAlbumViewController.m; sourceTree = "<group>"; };
 		C3A813371821E34500888507 /* TIMEWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMEWallViewController.h; sourceTree = "<group>"; };
 		C3A813381821E34500888507 /* TIMEWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMEWallViewController.m; sourceTree = "<group>"; };
 		C3A81426182262C100888507 /* TIMECell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMECell.h; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 		C3DBA8DF18213AD300A7CD8C /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C3DBA8E018213AD300A7CD8C /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		C3DBA8E118213AD300A7CD8C /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		C3F27BCF18232F8100206FFF /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 01.png; path = ../01.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C301E05418232A94004D7F7F /* MapKit.framework in Frameworks */,
+				C301E03E18232805004D7F7F /* ImageIO.framework in Frameworks */,
 				C3DBA87C18212B8600A7CD8C /* CoreGraphics.framework in Frameworks */,
 				C3DBA87E18212B8600A7CD8C /* UIKit.framework in Frameworks */,
 				C3DBA87A18212B8600A7CD8C /* Foundation.framework in Frameworks */,
@@ -115,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C301E038182325F0004D7F7F /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				C301E039182325F0004D7F7F /* 1_flow.png */,
+				C301E03A182325F0004D7F7F /* 2_detail.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		C3A8130A1821D9BD00888507 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +175,8 @@
 		C3DBA87818212B8600A7CD8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C301E05318232A94004D7F7F /* MapKit.framework */,
+				C301E03D18232805004D7F7F /* ImageIO.framework */,
 				C3DBA87918212B8600A7CD8C /* Foundation.framework */,
 				C3DBA87B18212B8600A7CD8C /* CoreGraphics.framework */,
 				C3DBA87D18212B8600A7CD8C /* UIKit.framework */,
@@ -186,6 +208,7 @@
 		C3DBA88018212B8600A7CD8C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C301E038182325F0004D7F7F /* Screenshots */,
 				C3DBA8D918212DFD00A7CD8C /* libs */,
 				C3DBA8C218212DF600A7CD8C /* Images */,
 				C3DBA88118212B8600A7CD8C /* TIME61-Info.plist */,
@@ -219,6 +242,7 @@
 			children = (
 				C3DBA8BF18212D2300A7CD8C /* TIMEHomeViewController.h */,
 				C3DBA8C018212D2300A7CD8C /* TIMEHomeViewController.m */,
+				C3A7E8E318229A67002E3C1C /* CartonCell.xib */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -228,8 +252,6 @@
 			children = (
 				C3A813371821E34500888507 /* TIMEWallViewController.h */,
 				C3A813381821E34500888507 /* TIMEWallViewController.m */,
-				C3A813341821DDFF00888507 /* TIMEAlbumViewController.h */,
-				C3A813351821DDFF00888507 /* TIMEAlbumViewController.m */,
 				C3A8147B18227CBF00888507 /* TIMEAlbumCollectionViewController.h */,
 				C3A8147C18227CBF00888507 /* TIMEAlbumCollectionViewController.m */,
 				C3A81426182262C100888507 /* TIMECell.h */,
@@ -250,6 +272,7 @@
 		C3DBA8C218212DF600A7CD8C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C3F27BCF18232F8100206FFF /* 01.png */,
 				C3DBA8DF18213AD300A7CD8C /* 1.jpg */,
 				C3DBA8E018213AD300A7CD8C /* 2.jpg */,
 				C3DBA8E118213AD300A7CD8C /* 3.jpg */,
@@ -261,17 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				C3A81477182272D600888507 /* ICViewPager */,
-				C3DBA8DA18212DFD00A7CD8C /* SDWebImage */,
 				C3DBA8DB18212DFD00A7CD8C /* SGFocusImageFrame */,
 			);
 			path = libs;
-			sourceTree = "<group>";
-		};
-		C3DBA8DA18212DFD00A7CD8C /* SDWebImage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SDWebImage;
 			sourceTree = "<group>";
 		};
 		C3DBA8DB18212DFD00A7CD8C /* SGFocusImageFrame */ = {
@@ -361,12 +376,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3F27BD018232F8100206FFF /* 01.png in Resources */,
+				C301E05218232A44004D7F7F /* Main.storyboard in Resources */,
 				C3DBA89218212B8700A7CD8C /* Images.xcassets in Resources */,
 				C3DBA8E218213AD300A7CD8C /* 1.jpg in Resources */,
 				C3DBA8E318213AD300A7CD8C /* 2.jpg in Resources */,
 				C3DBA8E418213AD300A7CD8C /* 3.jpg in Resources */,
 				C3DBA88418212B8600A7CD8C /* InfoPlist.strings in Resources */,
-				C3DBA88D18212B8600A7CD8C /* Main.storyboard in Resources */,
+				C301E03B182325F0004D7F7F /* 1_flow.png in Resources */,
+				C301E03C182325F0004D7F7F /* 2_detail.png in Resources */,
+				C3A7E8E418229A67002E3C1C /* CartonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +410,6 @@
 				C3A813391821E34500888507 /* TIMEWallViewController.m in Sources */,
 				C3DBA8C118212D2300A7CD8C /* TIMEHomeViewController.m in Sources */,
 				C3DBA8DE18212DFD00A7CD8C /* SGFocusImageFrame.m in Sources */,
-				C3A813361821DDFF00888507 /* TIMEAlbumViewController.m in Sources */,
 				C3A81428182262C100888507 /* TIMECell.m in Sources */,
 				C3DBA88618212B8600A7CD8C /* main.m in Sources */,
 				C3DBA8B818212CF300A7CD8C /* TIMEToysViewController.m in Sources */,
