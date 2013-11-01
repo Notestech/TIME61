@@ -2,16 +2,12 @@
 //  TIMEWallViewController.h
 //  TIME61
 //
-//  Created by caizhibin on 13-10-31.
+//  Created by caizhibin on 13-11-1.
 //  Copyright (c) 2013年 caizhibin. All rights reserved.
 //
 
-#import "ViewPagerController.h"
+#import "BaseViewController.h"
 
-@interface TIMEWallViewController : ViewPagerController<ViewPagerDataSource,ViewPagerDelegate>
-{
-    @private
-    NSArray *_array;
-}
+@interface TIMEWallViewController : BaseViewController
 
 @end

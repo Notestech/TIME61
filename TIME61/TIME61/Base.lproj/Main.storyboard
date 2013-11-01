@@ -9,27 +9,27 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Onr-sF-3Jv" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="QMv-V9-akj">
+                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="TabBar_background" id="QMv-V9-akj">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="lYp-X7-31o" kind="relationship" relationship="viewControllers" id="4Bt-Mx-QWl"/>
-                        <segue destination="Hc7-au-s8R" kind="relationship" relationship="viewControllers" id="ePG-vn-2em"/>
-                        <segue destination="XFe-wi-Rdo" kind="relationship" relationship="viewControllers" id="hMC-TL-zpr"/>
-                        <segue destination="VKF-E2-n6e" kind="relationship" relationship="viewControllers" id="9p6-5z-qVH"/>
-                        <segue destination="hQp-jW-d1Y" kind="relationship" relationship="viewControllers" id="iVY-O6-6Et"/>
+                        <segue destination="orf-EZ-4gh" kind="relationship" relationship="viewControllers" id="Hku-D4-98e"/>
+                        <segue destination="XFe-wi-Rdo" kind="relationship" relationship="viewControllers" id="FPn-vc-UYz"/>
+                        <segue destination="VKF-E2-n6e" kind="relationship" relationship="viewControllers" id="OcQ-Rj-3yd"/>
+                        <segue destination="hQp-jW-d1Y" kind="relationship" relationship="viewControllers" id="DVe-OO-WRH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDJ-A8-WQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1589" y="-454"/>
         </scene>
-        <!--Navigation Controller - 首页-->
+        <!--Base Navigation Controller - 首页-->
         <scene sceneID="VAp-73-cy3">
             <objects>
-                <navigationController definesPresentationContext="YES" id="lYp-X7-31o" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="lYp-X7-31o" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="TabBarItem_home" id="tRS-N0-RU8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D9a-18-VDx">
                         <autoresizingMask key="autoresizingMask"/>
@@ -41,6 +41,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fk-et-NR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-510" y="-1239"/>
+        </scene>
+        <!--Base Navigation Controller - Item-->
+        <scene sceneID="1s3-FR-8mp">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="orf-EZ-4gh" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tt5-SG-oI8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bUy-uq-Yo9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Hc7-au-s8R" kind="relationship" relationship="rootViewController" id="mLW-wa-JHA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ioi-e4-4PH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="-826"/>
         </scene>
         <!--Home View Controller - 时光网-->
         <scene sceneID="FX3-Fa-9EX">
@@ -61,48 +77,47 @@
                                     <navigationItem title="首页" id="NgT-Kr-nod"/>
                                 </items>
                             </navigationBar>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A4H-XP-PsV">
+                                <rect key="frame" x="0.0" y="186" width="320" height="335"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8N8-In-FZd">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GQw-ZH-mHX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zbf-Bz-ufH" id="Cu1-FF-4pV"/>
+                                    <outlet property="delegate" destination="Zbf-Bz-ufH" id="NZt-ad-Wro"/>
+                                </connections>
+                            </collectionView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GaN-fl-BPQ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="时光网" id="foN-aX-qGl"/>
+                    <connections>
+                        <outlet property="collectionView" destination="A4H-XP-PsV" id="pyO-Ki-d4H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yd-CW-xj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="382" y="-1239"/>
-        </scene>
-        <!--Album Collection View Controller-->
-        <scene sceneID="bsj-xl-2rd">
-            <objects>
-                <collectionViewController storyboardIdentifier="AlbumCollection" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CNM-Ra-HhV" customClass="TIMEAlbumCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="diP-aE-jtg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qd5-Yx-17L">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kGJ-lH-VkL">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="CNM-Ra-HhV" id="zCI-Ed-NZi"/>
-                            <outlet property="delegate" destination="CNM-Ra-HhV" id="MOU-XI-RTR"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Igl-8l-BcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="788" y="-804"/>
         </scene>
         <!--Wall View Controller - 画墙-->
         <scene sceneID="QjJ-CL-Ual">
@@ -118,10 +133,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="画墙" image="TabBarItem_wall" id="7uh-lY-l02"/>
+                    <navigationItem key="navigationItem" id="6Ya-wh-wYA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEe-sg-drv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-74" y="-804"/>
+            <point key="canvasLocation" x="962" y="-772"/>
         </scene>
         <!--Spirits View Controller - TA.精灵-->
         <scene sceneID="m2r-jy-eYb">
@@ -179,6 +195,40 @@
             </objects>
             <point key="canvasLocation" x="772" y="111"/>
         </scene>
+        <!--Album Collection View Controller-->
+        <scene sceneID="wjD-Xe-yyF">
+            <objects>
+                <collectionViewController storyboardIdentifier="AlbumCollection" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pzN-ag-Nye" customClass="TIMEAlbumCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="xBr-9N-wAT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DK6-Xw-Soz">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2NC-IV-xHI">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="pzN-ag-Nye" id="rJA-Zj-ddl"/>
+                            <outlet property="delegate" destination="pzN-ag-Nye" id="fwm-ze-eYA"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcU-h5-h7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="-772"/>
+        </scene>
         <!--Mypage View Controller - 我的主页-->
         <scene sceneID="3ih-On-RHZ">
             <objects>
@@ -207,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="382" y="534"/>
         </scene>
-        <!--Navigation Controller - TA.精灵-->
+        <!--Base Navigation Controller - TA.精灵-->
         <scene sceneID="vNC-Va-Jta">
             <objects>
-                <navigationController definesPresentationContext="YES" id="XFe-wi-Rdo" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="XFe-wi-Rdo" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TA.精灵" image="TabBarItem_spirits" id="G8z-vO-svl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DUk-ad-vQ0">
                         <autoresizingMask key="autoresizingMask"/>
@@ -223,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="-510" y="-354"/>
         </scene>
-        <!--Navigation Controller - 玩具定制-->
+        <!--Base Navigation Controller - 玩具定制-->
         <scene sceneID="4k1-JS-wCf">
             <objects>
-                <navigationController definesPresentationContext="YES" id="VKF-E2-n6e" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="VKF-E2-n6e" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="玩具定制" image="TabBarItem_toys" id="7nz-a0-qtk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xn4-HR-Jyz">
                         <autoresizingMask key="autoresizingMask"/>
@@ -239,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="-98" y="111"/>
         </scene>
-        <!--Navigation Controller - 我的主页-->
+        <!--Base Navigation Controller - 我的主页-->
         <scene sceneID="FLC-Hl-nrO">
             <objects>
-                <navigationController definesPresentationContext="YES" id="hQp-jW-d1Y" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="hQp-jW-d1Y" customClass="BaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的主页" image="TabBarItem_myppage" id="l3r-2g-daJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QzU-vQ-i8G">
                         <autoresizingMask key="autoresizingMask"/>
@@ -262,6 +312,7 @@
         <image name="TabBarItem_spirits" width="30" height="30"/>
         <image name="TabBarItem_toys" width="30" height="30"/>
         <image name="TabBarItem_wall" width="30" height="30"/>
+        <image name="TabBar_background" width="320" height="49"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

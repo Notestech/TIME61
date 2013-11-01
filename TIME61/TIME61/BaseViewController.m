@@ -1,25 +1,31 @@
 //
-//  TIMEToysViewController.m
+//  BaseViewController.m
 //  TIME61
 //
 //  Created by caizhibin on 13-11-1.
 //  Copyright (c) 2013年 caizhibin. All rights reserved.
 //
 
-#import "TIMEToysViewController.h"
+#import "BaseViewController.h"
 
-@interface TIMEToysViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation TIMEToysViewController
+@implementation BaseViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        if ( IOS7_OR_LATER )
+        {
+            self.edgesForExtendedLayout = UIRectEdgeNone;
+            self.extendedLayoutIncludesOpaqueBars = NO;
+            self.modalPresentationCapturesStatusBarAppearance = NO;
+        }
     }
+    
     return self;
 }
 

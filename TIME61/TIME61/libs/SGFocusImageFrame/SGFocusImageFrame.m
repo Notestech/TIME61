@@ -54,6 +54,7 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 10.0; //switch interval time
     return self;
 }
 
+///
 - (id)initWithFrame:(CGRect)frame delegate:(id<SGFocusImageFrameDelegate>)delegate focusImageItems:(SGFocusImageItem *)firstItem, ...
 {
     self = [super initWithFrame:frame];
@@ -100,7 +101,7 @@ static CGFloat SWITCH_FOCUS_PICTURE_INTERVAL = 10.0; //switch interval time
 - (void)setupViews
 {
     NSArray *imageItems = objc_getAssociatedObject(self, (__bridge const void *)SG_FOCUS_ITEM_ASS_KEY);
-    CGFloat mainWidth = self.frame.size.width, mainHeight = self.frame.size.height-300;
+    CGFloat mainWidth = self.frame.size.width, mainHeight = self.frame.size.height;
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.f, 0.f, mainWidth, mainHeight)];
     

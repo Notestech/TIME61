@@ -1,24 +1,24 @@
 //
-//  TIMEAlbumCollectionViewController.m
+//  BaseNavigationController.m
 //  TIME61
 //
-//  Created by caizhibin on 13-10-31.
+//  Created by caizhibin on 13-11-1.
 //  Copyright (c) 2013年 caizhibin. All rights reserved.
 //
 
-#import "TIMEAlbumCollectionViewController.h"
+#import "BaseNavigationController.h"
 
-@interface TIMEAlbumCollectionViewController ()
+@interface BaseNavigationController ()
 
 @end
 
-@implementation TIMEAlbumCollectionViewController
+@implementation BaseNavigationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+//        self.navigationBarHidden = YES;
     }
     return self;
 }
@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBar_background"] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning
