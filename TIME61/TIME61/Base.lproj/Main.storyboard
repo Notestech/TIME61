@@ -133,7 +133,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="画墙" image="TabBarItem_wall" id="7uh-lY-l02"/>
-                    <navigationItem key="navigationItem" id="6Ya-wh-wYA"/>
+                    <navigationItem key="navigationItem" title="画墙" id="6Ya-wh-wYA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEe-sg-drv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

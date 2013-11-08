@@ -1,0 +1,9 @@
+body{
+	margin: 0 auto;
+	padding: 0 auto;
+	background-image: url("../images/bg_body.png");
+}
+a {color: white;outline: none;text-decoration: none;}
+a:visited{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+a:active{}

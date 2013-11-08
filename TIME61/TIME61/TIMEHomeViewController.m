@@ -7,7 +7,10 @@
 //
 
 #import "TIMEHomeViewController.h"
-#import "SDWebImageDownloader.h"
+//#import "SDWebImageManager.h"
+//#import "UIImageView+WebCache.h"
+#import "UIImage+WebCache.h"     //添加了imageWithURL方法
+
 
 @interface TIMEHomeViewController ()
 
@@ -77,9 +80,10 @@
 }
 -(void)showGuidePictures
 {
-    SGFocusImageItem *item1 = [[SGFocusImageItem alloc] initWithTitle:@"title1" image:[UIImage imageNamed:@"1.jpg"] tag:1001];
-    SGFocusImageItem *item2 = [[SGFocusImageItem alloc] initWithTitle:@"title2" image:[UIImage imageNamed:@"2.jpg"] tag:1002];
-    SGFocusImageItem *item3 = [[SGFocusImageItem alloc] initWithTitle:@"title3" image:[UIImage imageNamed:@"3.jpg"] tag:1003];
+    SGFocusImageItem *item1 = [[SGFocusImageItem alloc] initWithTitle:@"title1" image:[UIImage imageWithURL:@"http://img.61time.com/v1/resource/haibao/haibao2.jpg"] tag:1001];
+    
+    SGFocusImageItem *item2 = [[SGFocusImageItem alloc] initWithTitle:@"title2" image:[UIImage imageWithURL:@"http://img.61time.com/v1/resource/haibao/1372925779.jpg"] tag:1002];
+    SGFocusImageItem *item3 = [[SGFocusImageItem alloc] initWithTitle:@"title3" image:[UIImage imageWithURL:@"http://img.61time.com/v1/resource/haibao/1380013327.jpg"] tag:1003];
     
     SGFocusImageFrame *imageFrame = [[SGFocusImageFrame alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, 122) delegate:self focusImageItems:item1,item2,item3, nil];
     imageFrame.switchTimeInterval = 5.f;

@@ -1,0 +1,422 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"padding-",
+				"padding-top"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"mysql_d",
+				"mysql_select_db"
+			],
+			[
+				"mysql",
+				"mysql_error"
+			],
+			[
+				"s",
+				"src	Attr"
+			],
+			[
+				"_",
+				"_POST  (variable)"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"server",
+				"Servers"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/zhibincai/Desktop/TIME61/localhost/index.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/api/toysjson.json",
+		"/Users/zhibincai/Repositories/localhost/View/Home/index.html",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/Home/index.html",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/Home/index.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Index.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Controller/Home.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Controller/Acount.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/.htaccess",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Config.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Style/base.css",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Style/main.css",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Controller/user.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/Acount/signup.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/Acount/signin.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/css/main.css",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/css/base.css",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/index.html",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/ini.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/main/initializer.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/main/loader.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/main/router.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/main/dispatcher.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/dispatcher.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Core/router.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Controller/signup.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/Controller/index.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/index.html",
+		"/Users/zhibincai/index.html",
+		"/Users/zhibincai/Desktop/TIME61/localhost/link.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/signup.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/signin.php",
+		"/Users/zhibincai/Desktop/TIME61/localhost/View/time61.sublime-workspace",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/0/basic.php",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/0/configure.php",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/ctrl/signup.php",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/view/signup.html",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/view/index.html",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/view/signin.html",
+		"/Users/zhibincai/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/zhibincai/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/index.php",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/link.php",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/ctrl/signin.php",
+		"/Users/zhibincai/Library/Application Support/Sublime Text 3/Packages/Phpcs/Default (OSX).sublime-keymap",
+		"/Users/zhibincai/Library/Application Support/Sublime Text 3/Packages/PhpCodeGen/phpcodegen.sublime-settings",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/ctrl/index.php",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/index.html",
+		"/Users/zhibincai/Library/Application Support/Sublime Text 3/Packages/User/phpcodegen.sublime-settings",
+		"/Users/zhibincai/Repositories/appidf376ab9gaa/1/conn.php",
+		"/Users/zhibincai/Documents/打包iso命令",
+		"/Users/zhibincai/Documents/1.html",
+		"/Library/WebServer/Documents/phpMyAdmin/config.inc.php",
+		"/Users/zhibincai/Documents/mac下mysql的卸载",
+		"/Library/WebServer/Documents/info.php",
+		"/private/etc/apache2/httpd.conf"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "time61.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BB0FBDF1829D563007AE366 /* UIImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0FBDE1829D563007AE366 /* UIImage+WebCache.m */; };
 		C301E03E18232805004D7F7F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C301E03D18232805004D7F7F /* ImageIO.framework */; };
 		C301E05218232A44004D7F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DBA88B18212B8600A7CD8C /* Main.storyboard */; };
 		C301E05418232A94004D7F7F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C301E05318232A94004D7F7F /* MapKit.framework */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BB0FBDD1829D563007AE366 /* UIImage+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebCache.h"; sourceTree = "<group>"; };
+		4BB0FBDE1829D563007AE366 /* UIImage+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebCache.m"; sourceTree = "<group>"; };
 		C301E03D18232805004D7F7F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		C301E05318232A94004D7F7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C32F9D481823343000CF7EB3 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 				C32F9D871823671800CF7EB3 /* BaseViewController.m */,
 				C32F9D8C182367D600CF7EB3 /* BaseNavigationController.h */,
 				C32F9D8D182367D600CF7EB3 /* BaseNavigationController.m */,
+				4BB0FBDD1829D563007AE366 /* UIImage+WebCache.h */,
+				4BB0FBDE1829D563007AE366 /* UIImage+WebCache.m */,
 			);
 			name = Bsae;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 				C32F9D661823343000CF7EB3 /* NSData+GIF.m in Sources */,
 				C32F9D6C1823343000CF7EB3 /* SDWebImageManager.m in Sources */,
 				C3DBA88A18212B8600A7CD8C /* TIMEAppDelegate.m in Sources */,
+				4BB0FBDF1829D563007AE366 /* UIImage+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

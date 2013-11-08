@@ -1,0 +1,81 @@
+/*common*/
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0 auto;
+}
+.bar{
+	width: 100%;
+	height: 44px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*顶部视图*/
+.top{
+	width: 100%;
+	height: 90px;
+	/*background-color: #112233;*/
+	background-image: url("../images/bg_top.png");
+	
+}
+#logo{
+	width: 176px;
+	height: 81px;
+	float: left;
+}
+#nav{
+	width: 600px;
+	height: 27px;
+	padding-top: 49px;
+	margin: 0px 10px 0px 10px;
+	float: left;
+}
+#nav ul{
+	list-style: none;
+	padding: 0 auto;
+	margin: 0 auto;
+}
+#nav ul li{
+	width: 85px;
+	height: 27px;
+	font-size: 18px;
+	margin-left: 20px;
+	padding: 0 auto;
+	float: left;
+}
+#nav ul li a{
+
+}
+#search{
+	width: 200px;
+	height: 27px;
+	margin-bottom: 24px;
+	margin-top: 49px;
+	background-image: url("../images/bg_search.png");
+	float: left;
+}
+
+/*热点轮播*/
+.hot{
+	width: 100%;
+	margin-top: 0px;
+}
+.wheel{
+	width: 960px;
+	height: 382px;
+	margin-bottom: 30px;
+}
+
+/*主题内容瀑布流*/
+.main{
+	width: 960px;
+
+}
+
+/*尾部视图*/
+.bottom{
+	width: 960px;
+	background-image: url("../images/bg_bottom.png");
+	margin: 0 auto;
+}
