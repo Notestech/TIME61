@@ -47,11 +47,22 @@
 #nav ul li a{
 
 }
+.sign_form{
+	width: 400;
+	height: 500;
+	background-color: #48f389;
+	margin: 0 auto;
+}
+/*#signin_form{
+
+}
+#signup_form{
+
+}*/
 #search{
 	width: 200px;
 	height: 27px;
-	margin-bottom: 24px;
-	margin-top: 49px;
+	margin-top: 20px;
 	background-image: url("../images/bg_search.png");
 	float: left;
 }

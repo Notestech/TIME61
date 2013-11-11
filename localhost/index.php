@@ -18,14 +18,18 @@ require_once("link.php")
 		</div>
 		<div id="nav">
 			<ul>
-				<li><a href="#">首页</a></li>
+				<li><a href="http://time61">首页</a></li>
 				<li><a href="#">画墙</a></li>
 				<li><a href="#">TA.精灵</a></li>
 				<li><a href="#">玩具定制</a></li>
 			</ul>
 		</div>
-		<div id="search">
+		<div>
+			<div id="sign"><a href="html/signin.html">登入</a>&nbsp;|&nbsp;<a href="html/signup.html">注册</a></div>
+
+			<div id="search">
 			
+			</div>
 		</div>
 	</div>
 </div>

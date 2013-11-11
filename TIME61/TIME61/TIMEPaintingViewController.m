@@ -9,6 +9,7 @@
 #import "TIMEPaintingViewController.h"
 #import "PaintingViewCell.h"
 #import "UIImage+WebCache.h"
+#import "TIMEPaintingDetailViewController.h"
 
 @interface TIMEPaintingViewController ()
 
@@ -52,7 +53,7 @@
         value = [dataDic objectForKey:key];
 
         painting = [value objectAtIndex:0];
-        NSLog(@"painting:%@",painting);
+//        NSLog(@"painting:%@",painting);
         [paintings addObject:painting];
 
     }
@@ -89,7 +90,12 @@
     
     return cell;
 }
-
+#pragma mark - UICollectionViewDelegate Method----------------
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    TIMEPaintingDetailViewController *detailVC = [[TIMEPaintingDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
 #pragma mark -自定义的方法
 //请求JSON数据
 -(NSDictionary *)requestJSON:(NSString *)urlString
