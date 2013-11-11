@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "ViewPagerController.h"
 
-@interface TIMEWallViewController : BaseViewController
+@interface TIMEWallViewController : ViewPagerController<ViewPagerDataSource,ViewPagerDelegate>{
+@private
+    NSArray *_array;
+}
+
 
 @end

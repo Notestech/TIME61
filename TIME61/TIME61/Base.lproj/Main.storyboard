@@ -63,8 +63,8 @@
             <objects>
                 <viewController id="Zbf-Bz-ufH" customClass="TIMEHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PII-TY-Ede"/>
-                        <viewControllerLayoutGuide type="bottom" id="s55-xj-HUJ"/>
+                        <viewControllerLayoutGuide type="top" id="My4-p0-4VM"/>
+                        <viewControllerLayoutGuide type="bottom" id="qdR-Aq-s0H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LkF-8A-qP5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -87,14 +87,37 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GQw-ZH-mHX">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CartonCell" id="GQw-ZH-mHX" customClass="CartonViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QB1-dQ-4Vp">
+                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="160"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="La8-ug-jmv">
+                                                    <rect key="frame" x="198" y="0.0" width="122" height="160"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="hN1-Ib-2fK">
+                                                    <rect key="frame" x="130" y="69" width="60" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <size key="customSize" width="320" height="160"/>
+                                        <connections>
+                                            <outlet property="modelView" destination="La8-ug-jmv" id="t06-IP-uTy"/>
+                                            <outlet property="ownerLable" destination="hN1-Ib-2fK" id="V0k-CH-QLz"/>
+                                            <outlet property="paintingView" destination="QB1-dQ-4Vp" id="SYj-Kn-yu1"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -124,8 +147,8 @@
             <objects>
                 <viewController id="Hc7-au-s8R" customClass="TIMEWallViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KEz-qf-8Og"/>
-                        <viewControllerLayoutGuide type="bottom" id="YYg-kh-sl9"/>
+                        <viewControllerLayoutGuide type="top" id="diy-xs-tSO"/>
+                        <viewControllerLayoutGuide type="bottom" id="FFl-0s-ylm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wup-Oa-ofG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -144,8 +167,8 @@
             <objects>
                 <viewController id="taU-U9-DNs" customClass="TIMESpiritsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RzV-sO-Sk3"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fql-UY-qfF"/>
+                        <viewControllerLayoutGuide type="top" id="Raj-Y6-xsQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gHo-RK-oZ1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0rA-ME-zEz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -172,8 +195,8 @@
             <objects>
                 <viewController id="93L-YI-gyv" customClass="TIMEToysViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ryh-En-dYA"/>
-                        <viewControllerLayoutGuide type="bottom" id="1HT-LA-DPB"/>
+                        <viewControllerLayoutGuide type="top" id="N5z-WZ-i9G"/>
+                        <viewControllerLayoutGuide type="bottom" id="QdS-hd-SRc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JCB-z7-v1w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -195,47 +218,13 @@
             </objects>
             <point key="canvasLocation" x="772" y="111"/>
         </scene>
-        <!--Album Collection View Controller-->
-        <scene sceneID="wjD-Xe-yyF">
-            <objects>
-                <collectionViewController storyboardIdentifier="AlbumCollection" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pzN-ag-Nye" customClass="TIMEAlbumCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="xBr-9N-wAT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DK6-Xw-Soz">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2NC-IV-xHI">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="pzN-ag-Nye" id="rJA-Zj-ddl"/>
-                            <outlet property="delegate" destination="pzN-ag-Nye" id="fwm-ze-eYA"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EcU-h5-h7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1578" y="-772"/>
-        </scene>
         <!--Mypage View Controller - 我的主页-->
         <scene sceneID="3ih-On-RHZ">
             <objects>
                 <viewController id="N4a-Ic-CCm" customClass="TIMEMypageViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uhM-DT-w9x"/>
-                        <viewControllerLayoutGuide type="bottom" id="49H-8c-KDK"/>
+                        <viewControllerLayoutGuide type="top" id="8mh-nm-wYS"/>
+                        <viewControllerLayoutGuide type="bottom" id="DUp-8k-bCO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dEe-iU-aT6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -304,6 +293,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MA1-uJ-6Kr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-510" y="534"/>
+        </scene>
+        <!--Painting View Controller-->
+        <scene sceneID="yYW-ik-7H1">
+            <objects>
+                <collectionViewController storyboardIdentifier="paintingViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zMU-6O-Xnb" customClass="TIMEPaintingViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="9AK-zu-afe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="faK-Hy-fh6">
+                            <size key="itemSize" width="100" height="170"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaintingViewCell" id="Anr-Mk-zTa" customClass="PaintingViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="170"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="21" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUV-cv-Cqu">
+                                            <rect key="frame" x="0.0" y="-40" width="100" height="161"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="22" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5I-8f-hoy">
+                                            <rect key="frame" x="0.0" y="121" width="100" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="23" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGc-6s-WGH">
+                                            <rect key="frame" x="0.0" y="135" width="100" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="barLable" destination="rGc-6s-WGH" id="IEA-zr-fxk"/>
+                                    <outlet property="paintingView" destination="PUV-cv-Cqu" id="p0z-mG-quw"/>
+                                    <outlet property="userLable" destination="O5I-8f-hoy" id="TP4-UR-v0o"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zMU-6O-Xnb" id="k60-5L-tm0"/>
+                            <outlet property="delegate" destination="zMU-6O-Xnb" id="YG6-Li-fqU"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="collectionView" destination="9AK-zu-afe" id="aA2-98-Qiv"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1OF-6b-53m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="-772"/>
         </scene>
     </scenes>
     <resources>

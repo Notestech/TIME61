@@ -9,8 +9,13 @@
 #import "BaseViewController.h"
 #import "SGFocusImageFrame.h"
 
+//@class ToyModel;
+
 @interface TIMEHomeViewController : BaseViewController<SGFocusImageFrameDelegate>
 
 @property(strong,nonatomic)IBOutlet UICollectionView *collectionView;
+
+@property(nonatomic)NSArray *data;
+//@property(nonatomic)ToyModel *toyModel;
 
 @end
