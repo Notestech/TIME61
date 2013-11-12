@@ -24,10 +24,10 @@ while ($result = mysql_fetch_array($req)){
 	$paintings[] = $painting;
 }
 
-// echo json_encode($paintings);
-echo array_to_json_string($paintings);
-// echo "<pre>";
+echo json_encode($paintings);
+// echo array_to_json_string($paintings);
 
+// echo "<pre>";
 // echo "</pre>";
 
 function array_to_json_string($arraydata) {

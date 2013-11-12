@@ -36,21 +36,4 @@ while ($row = mysql_fetch_assoc($req)) {
 echo json_encode($toys);
 // echo array_to_json_string($toys);
 
-function array_to_json_string($arraydata) {
-		$output = "";
-		$output .= "{";
-		foreach($arraydata as $key=>$val){
-			if (is_array($val)) {
-				$output .= "\"".$key."\" : [{";
-					foreach($val as $subkey=>$subval){
-						$output .= "\"".$subkey."\" : \"".$subval."\",";
-					}
-				$output .= "}],";
-			} else {
-				$output .= "\"".$key."\" : \"".$val."\",";
-			}
-		}
-		$output .= "}";
-		return $output;
-	}
  ?>
