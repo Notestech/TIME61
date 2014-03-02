@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "TabBarItem_spirits.png"
+      "filename" : "tabbarItem_spirits.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "TabBarItem_mypage@2x.png"
+      "filename" : "tabbarItem_spirits@2x.png"
     }
   ],
   "info" : {

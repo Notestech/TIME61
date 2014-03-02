@@ -8,6 +8,14 @@
 
 #import "Commons.h"
 
+CGFloat OriginY()
+{
+    if (IOS7_OR_LATER) {
+        return 0;
+    }
+    return 20;
+}
+
 CGRect AppBounds()
 {
     return [UIScreen mainScreen].bounds;
@@ -19,3 +27,4 @@ CGRect AppFrame()
     
     return CGRectMake(0, 0, frame.size.width, frame.size.height);
 }
+

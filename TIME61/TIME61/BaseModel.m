@@ -10,13 +10,14 @@
 
 @implementation BaseModel
 
--(id)initWithDictionary:(NSDictionary *)dic
+-(id)initWithDataDic:(NSDictionary *)dataDic;
 {
     if (self = [super init]) {
-        [self setAttribbutes:dic];
+        [self setAttribbutes:dataDic];
     }
     return self;
 }
+
 -(id)initWithCoder:(NSCoder *)decoder
 {
     if (self = [super init]) {
@@ -70,41 +71,42 @@
 -(NSString *)description
 {
     NSMutableString *attrsDesc = [NSMutableString stringWithCapacity:100];
-    NSDictionary *attrMapDic = [self attributeMapDictionary];
-    NSEnumerator *keyEnum = [attrMapDic keyEnumerator];
-    id attributeName;
+	NSDictionary *attrMapDic = [self attributeMapDictionary];
+	NSEnumerator *keyEnum = [attrMapDic keyEnumerator];
+	id attributeName;
+	
+	while ((attributeName = [keyEnum nextObject])) {
+		SEL getSel = NSSelectorFromString(attributeName);
+		if ([self respondsToSelector:getSel]) {
+			NSMethodSignature *signature = nil;
+			signature = [self methodSignatureForSelector:getSel];
+			NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+			[invocation setTarget:self];
+			[invocation setSelector:getSel];
+			NSObject *valueObj = nil;
+			[invocation invoke];
+			[invocation getReturnValue:&valueObj];
+			if (valueObj) {
+//                NSLog(@"valueobj:%@",(NSString *)valueObj);
+				[attrsDesc appendFormat:@" [%@=%@] ",attributeName, valueObj];
+                
+			}else {
+				[attrsDesc appendFormat:@" [%@=nil] ",attributeName];
+			}
+			
+		}
+	}
+	
+	NSString *customDesc = [self customDescription];
+	NSString *desc;
+	
+	if (customDesc && [customDesc length] > 0 ) {
+		desc = [NSString stringWithFormat:@"%@:{%@,%@}",[self class],attrsDesc,customDesc];
+	}else {
+		desc = [NSString stringWithFormat:@"%@:{%@}",[self class],attrsDesc];
+	}
     
-    while ((attributeName = [keyEnum nextObject])) {
-        SEL getSel = NSSelectorFromString(attributeName);
-        if ([self respondsToSelector:getSel]) {
-            
-            NSMethodSignature *signature = nil;
-            
-            signature = [self methodSignatureForSelector:getSel];
-            NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-            [invocation setTarget:self];
-            [invocation setSelector:getSel];
-            
-            NSObject *valueObj = nil;
-            [invocation invoke];
-            [invocation getReturnValue:&valueObj];
-            if (valueObj) {
-                [attrsDesc appendFormat:@" [%@=%@] ", attributeName, valueObj];
-            }else{
-                [attrsDesc appendFormat:@" [%@=nil] ", attributeName];
-            }
-        }
-    }
-    
-    NSString *customDesc = [self customDescription];
-    NSString *desc;
-    
-    if (customDesc && [customDesc length] > 0) {
-        desc = [NSString stringWithFormat:@"%@:{%@,%@}", [self class],attrsDesc, customDesc];
-    }else{
-        desc = [NSString stringWithFormat:@"%@:{%@}", [self class],attrsDesc];
-    }
-    return desc;
+	return desc;
 }
 
 -(NSString *)customDescription

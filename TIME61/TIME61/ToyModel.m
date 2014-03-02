@@ -12,8 +12,8 @@
 
 -(NSDictionary *)attributeMapDictionary{
     NSDictionary *attrMap = @{@"owner": @"owner",
-                              @"paintingURL":@"paintingURL",
-                              @"modelURL":@"modelURL"};
+                              @"paintURL":@"paintingURL",
+                              @"toyURL":@"modelURL"};
     return attrMap;
 }
 

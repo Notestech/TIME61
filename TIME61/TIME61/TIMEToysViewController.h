@@ -8,6 +8,10 @@
 
 #import "BaseViewController.h"
 
-@interface TIMEToysViewController : BaseViewController
+@interface TIMEToysViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property(nonatomic)NSArray *data;
 
 @end

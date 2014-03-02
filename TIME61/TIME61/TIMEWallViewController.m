@@ -7,7 +7,7 @@
 //
 
 #import "TIMEWallViewController.h"
-#import "TIMEPaintingViewController.h"
+#import "TIMEPaintViewController.h"
 
 @interface TIMEWallViewController ()
 
@@ -31,7 +31,7 @@
     self.dataSource = self;
     self.delegate = self;
     
-    _array = @[@"最新",@"人气",@"可爱",@"有趣",@"清新"];
+    _array = @[@"最新",@"可爱",@"有趣",@"清新"];
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
@@ -64,10 +64,10 @@
 //返回内容视图
 - (UIViewController *)viewPager:(ViewPagerController *)viewPager contentViewControllerForTabAtIndex:(NSUInteger)index
 {
-    TIMEPaintingViewController *paintingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"paintingViewController"];
+    TIMEPaintViewController *paintViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"paintViewController"];
     
     
-    return paintingViewController;
+    return paintViewController;
 }
 
 //定位

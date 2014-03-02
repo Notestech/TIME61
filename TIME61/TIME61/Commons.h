@@ -24,4 +24,4 @@ CGRect AppFrame();
  *
  */
 //CGFloat ToolbarHeightForOrientation(UIInterfaceOrientation orientation);
-
+CGFloat OriginY();

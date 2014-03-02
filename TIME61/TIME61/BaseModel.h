@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BaseModel : NSObject
+@interface BaseModel : NSObject <NSCoding>{
 
--(id)initWithDictionary:(NSDictionary *)dic;
+}
+
+-(id)initWithDataDic:(NSDictionary *)dataDic;
 -(NSDictionary *)attributeMapDictionary;
 -(void)setAttribbutes:(NSDictionary *)dataDic;
 -(NSString *)description;

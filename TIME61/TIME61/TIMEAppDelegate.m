@@ -7,12 +7,40 @@
 //
 
 #import "TIMEAppDelegate.h"
-
+#import <ShareSDK/ShareSDK.h>
 @implementation TIMEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [ShareSDK registerApp:@"1466b16c5b0c"];
+    
+    //……
+    
+    //添加新浪微博应用
+    [ShareSDK connectSinaWeiboWithAppKey:@"1228682046"
+                               appSecret:@"14611f5ed709ae11488e7317d2cc3532"
+                             redirectUri:@"http://baidu.com"];
+    /****
+    //添加腾讯微博应用
+    [ShareSDK connectTencentWeiboWithAppKey:@"801307650"
+                                  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+                                redirectUri:@"http://www.sharesdk.cn"];
+    
+    //添加QQ空间应用
+    [ShareSDK connectQZoneWithAppKey:@"100371282"
+                           appSecret:@"aed9b0303e3ed1e27bae87c33761161d"];
+    
+    //添加网易微博应用
+    [ShareSDK connect163WeiboWithAppKey:@"T5EI7BXe13vfyDuy"
+                              appSecret:@"gZxwyNOvjFYpxwwlnuizHRRtBRZ2lV1j"
+                            redirectUri:@"http://www.shareSDK.cn"];
+    
+    //添加搜狐微博应用
+    [ShareSDK connectSohuWeiboWithConsumerKey:@"SAfmTG1blxZY3HztESWx"
+                               consumerSecret:@"yfTZf)!rVwh*3dqQuVJVsUL37!F)!yS9S!Orcsij"
+                                  redirectUri:@"http://www.sharesdk.cn"];
+    ****/
+    
     return YES;
 }
 							

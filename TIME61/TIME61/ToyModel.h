@@ -11,7 +11,7 @@
 @interface ToyModel : BaseModel
 
 @property(nonatomic)NSString *owner;                //玩具主人
-@property(nonatomic)NSString *paintingURL;         //玩具原画URL
-@property(nonatomic)NSString *modelURL;             //玩具实体模型URL
+@property(nonatomic)NSString *paintURL;         //玩具原画URL
+@property(nonatomic)NSString *toyURL;             //玩具实体模型URL
 
 @end
