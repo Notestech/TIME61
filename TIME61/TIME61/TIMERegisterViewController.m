@@ -7,6 +7,8 @@
 //
 
 #import "TIMERegisterViewController.h"
+#import "WebRequest.h"
+#import "ProgressHUD.h"
 
 @interface TIMERegisterViewController ()
 
@@ -26,7 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.containerView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+    
+	[_pwdText setSecureTextEntry:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +40,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)registerAction:(id)sender {
+    NSString *url = @"http://time61/user/signup.php";
+    NSString *parameters= [NSString stringWithFormat:@"name=%@&pwd=%@",_nicknameText.text,_pwdText.text];
+    NSData *result = [WebRequest requestURL:url inMethod:@"POST" parameters:parameters];
+    NSString *resultString = [[NSString alloc]initWithData:result encoding:NSUTF8StringEncoding];
+    if (resultString != 0) {
+        [ProgressHUD showSuccess:@"注册成功"];
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [ProgressHUD showError:@"注册失败"];
+    }
+}
 @end

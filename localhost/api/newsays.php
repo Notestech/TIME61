@@ -24,8 +24,9 @@ while ($row = mysql_fetch_assoc($req)) {
 // 	'user'		=> $acountInfo['0'],
 	'user'		=> $user,
 	'time' 		=> $row['time'],
-	'content'	=> $row['content']
-	);
+	'content'	=> $row['content'],
+	'imageURL'  => $row['imageURL']
+ 	);
 
 	$newsays[] = $newsay;
 

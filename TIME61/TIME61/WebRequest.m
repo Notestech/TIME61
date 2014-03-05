@@ -12,35 +12,57 @@
 
 +(id)requestJSON:(NSString *)urlString
 {
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSData *data = [self requestURL:urlString inMethod:@"GET" parameters:nil];
+    
     NSError *error;
-    id response = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    
+//    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:10];
+//    NSURLResponse *response = nil;
+//    NSError *error = nil;
+//    NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    
+    id result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     if (error) {
         NSLog(@"%@",error);
     }
-    if (response == nil) {
+    
+    if (result == nil) {
         return nil;
     }
-    return response;
+    return result;
 }
 
-+(NSData *)requestInPOST:(NSString *)urlString parameters:(NSString *)parameters
+
++(NSData *)requestURL:(NSString *)urlString inMethod:(NSString *)method parameters:(NSString *)parameters
 {
+    //设置缓存
+    NSURLCache *urlCache = [NSURLCache sharedURLCache];
+    [urlCache setMemoryCapacity:1*1024*1024];
+    
     //提交地址
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     //创建请求
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     
-    [request setHTTPMethod:@"POST"];//设置请求方式为POST,默认为GET
+    [request setHTTPMethod:method];//设置请求方式为POST,默认为GET
     
     //设置请求参数
     
     NSData *data = [parameters dataUsingEncoding:NSUTF8StringEncoding];
     [request setHTTPBody:data];
     
+    //获取缓存输出
+    NSCachedURLResponse *response = [urlCache cachedResponseForRequest:request];
+    
+    if (response != nil) {
+        [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+    }
+    
+    
     //链接服务器
     NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    
     
     return received;
 }

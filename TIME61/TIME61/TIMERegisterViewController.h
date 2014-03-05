@@ -10,4 +10,10 @@
 
 @interface TIMERegisterViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UITextField *nicknameText;
+@property (weak, nonatomic) IBOutlet UITextField *pwdText;
+@property (weak, nonatomic) IBOutlet UITextField *qqText;
+
+- (IBAction)registerAction:(id)sender;
 @end

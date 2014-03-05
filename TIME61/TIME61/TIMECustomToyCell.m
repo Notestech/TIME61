@@ -8,7 +8,8 @@
 
 #import "TIMECustomToyCell.h"
 #import "ToyModel.h"
-#import "UIImage+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "SDWebImageDownloader.h"
 
 @implementation TIMECustomToyCell
 
@@ -52,7 +53,7 @@
     
     //绘画视图
     _paintsView.frame = CGRectMake(0, 0, 140, 240);
-    _paintsView.image = [UIImage imageWithURL:_toyModel.paintURL];
+    [_paintsView setImageWithURL:[NSURL URLWithString:_toyModel.paintURL]];
     
     //作者
     _ownerLable.frame = CGRectMake(140, 70, 40, 20);
@@ -60,7 +61,7 @@
     
     //玩具视图
     _toyView.frame = CGRectMake(180, 0, 140, 240);
-    _toyView.image = [UIImage imageWithURL:_toyModel.toyURL];
+    [_toyView setImageWithURL:[NSURL URLWithString:_toyModel.toyURL]];
     
     
 }

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BaseModel : NSObject <NSCoding>{
+@interface BaseModel : NSObject <NSCoding,NSCopying>{
 
 }
 

@@ -8,9 +8,9 @@
 
 #import "TIMEPaintViewController.h"
 #import "PaintCollectionCell.h"
-#import "UIImage+WebCache.h"
 #import "TIMEPaintDetailViewController.h"
 #import "PaintsModel.h"
+#import "WebRequest.h"
 
 @interface TIMEPaintViewController ()
 
@@ -22,7 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -38,32 +38,38 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark -loadData
 -(void)setupCollectionView
 {
-    //遍历解析多层JSON数据
-    /*
-     NSDictionary *dataDic = [self requestJSON:@"http://time61/api/paintings.php"];
-     
-     NSArray *keys = [dataDic allKeys];
-     
-     id key,painting;
-     NSArray *value;
-     NSMutableArray *paintings = [[NSMutableArray alloc] init];
-     
-     //遍历字典
-     for (int i = 0;i < keys.count; i++) {
-     key = [keys objectAtIndex:i];
-     value = [dataDic objectForKey:key];
-     
-     painting = [value objectAtIndex:0];
-     //  NSLog(@"painting:%@",painting);
-     [paintings addObject:painting];
-     
-     }
-     self.data = paintings;
-     */
+    //遍历解析多层JSON数据http://time61/api/newsays.php
     
-    NSArray *dataArray = [self requestJSON:@"http://time61/api/paintings.php"];
+//     NSDictionary *dataDic = [WebRequest requestJSON:@"http://time61/api/paintings.php"];
+//     
+//     NSArray *keys = [dataDic allKeys];
+//     
+//     id key,painting;
+//     NSArray *value;
+//     NSMutableArray *paintings = [[NSMutableArray alloc] init];
+//     
+//     //遍历字典
+//     for (int i = 0;i < keys.count; i++) {
+//     key = [keys objectAtIndex:i];
+//     value = [dataDic objectForKey:key];
+//     
+//     painting = [value objectAtIndex:0];
+//     //  NSLog(@"painting:%@",painting);
+//     [paintings addObject:painting];
+//     
+//     }
+//    NSLog(@"%d",[paintings count]);
+//     self.data = paintings;
+    
+    
+    NSArray *dataArray = [WebRequest requestJSON:@"http://time61/api/paintings.php"];
+//    NSArray *dataArray = [WebRequest requestJSON:@"http://time61/api/newsays.php"];
+    
+    
+    
     NSMutableArray *paintsArray = [[NSMutableArray alloc] initWithCapacity:dataArray.count];
     
     for (NSDictionary *paintDic in dataArray) {
@@ -71,7 +77,6 @@
         [paintsArray addObject:paintsModel];
     }
     self.data = paintsArray;
-    
     //设置背景色
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
@@ -82,6 +87,8 @@
     
     //应用布局
     [self.collectionView setCollectionViewLayout:layout];
+    
+//    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource Method----------------
@@ -94,7 +101,9 @@
 {
     static NSString *identifier = @"paintCollectionCell";
     PaintCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
+    if (cell == nil) {
+        cell = [[PaintCollectionCell alloc]initWithFrame:CGRectMake(0, 0, 100, 200)];
+    }
     PaintsModel *paintsModel = [self.data objectAtIndex:indexPath.row];
     cell.paintsModel = paintsModel;
     return cell;
@@ -109,41 +118,5 @@
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
-
-#pragma mark -自定义的方法
-//请求多层JSON数据,pintings.php里的array_to_json_string方法在to string后返回的就是一个多层的JSON数据,需要配合setupCollectionView方法里的遍历方法完成JSON的解析
-/*
- -(NSDictionary *)requestJSON:(NSString *)urlString
- {
- //    NSURL *url = [NSURL URLWithString:@"http://time61/api/paintings.php"];
- NSURL *url = [NSURL URLWithString:urlString];
- 
- NSData *data = [NSData dataWithContentsOfURL:url];
- NSError *error;
- id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
- if (error) {
- NSLog(@"Parse JSON:%@",error);
- }
- if (json == nil) {
- return nil;
- }
- return json;
- }
- */
-//请求只有一层的JSON数据
--(NSMutableArray *)requestJSON:(NSString *)urlString
-{
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSError *error;
-    NSMutableArray *json = (NSMutableArray *)[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    if (error) {
-        NSLog(@"%@",error);
-    }
-    if (json == nil) {
-        return nil;
-    }
-    return json;
-}
 
 @end

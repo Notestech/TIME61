@@ -13,10 +13,8 @@
 
 @property(nonatomic)NSString *sayID;
 
-//@property(nonatomic)NSString *tou;      //头像URL
-//@property(nonatomic)NSString *user;     //用户名
 @property(nonatomic)UserModel *owner;
 @property(nonatomic)NSString *time;     //发表时间
 @property(nonatomic)NSString *content;  //发表内容
-
+@property(nonatomic)NSString *paintImageURL;
 @end

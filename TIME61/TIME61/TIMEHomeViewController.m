@@ -7,10 +7,13 @@
 //
 
 #import "TIMEHomeViewController.h"
-#import "UIImage+WebCache.h"     //添加了imageWithURL方法
 #import "NewsayModel.h"
 #import "NewsayTableCell.h"
 #import "TIMENewsayDetailViewController.h"
+#import "WebRequest.h"
+#import "UIImageView+WebCache.h"
+#import "SDWebImageManager.h"
+#import "BaseNavigationController.h"
 
 @interface TIMEHomeViewController ()
 
@@ -31,9 +34,10 @@
 {
     [super viewDidLoad];
     [self showGuidePictures];
-  
-
     [self setupMainView];
+    if (!IOS7_OR_LATER) {
+        _tableView.frame = CGRectMake(0, 112, ScreenWidth, ScreenHeight-49);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,12 +47,25 @@
 
 -(void)showGuidePictures
 {
-    SGFocusImageItem *item1 = [[SGFocusImageItem alloc] initWithTitle:@"title1" image:[UIImage imageWithURL:@"http://time61/upload/wheel/wheel_01.png"] tag:1001];
+    NSArray *array = [WebRequest requestJSON:@"http://time61/api/getwheels.php"];
+    NSMutableArray *marray = [[NSMutableArray alloc]initWithCapacity:[array count]];
+    for (NSDictionary *dataDic in array) {
+        NSString *imageURL = [dataDic objectForKey:@"imageURL"];
+        [marray addObject:imageURL];
+    }
     
-    SGFocusImageItem *item2 = [[SGFocusImageItem alloc] initWithTitle:@"title2" image:[UIImage imageWithURL:@"http://time61/upload/wheel/wheel_02.png"] tag:1002];
-    SGFocusImageItem *item3 = [[SGFocusImageItem alloc] initWithTitle:@"title3" image:[UIImage imageWithURL:@"http://time61/upload/wheel/wheel_03.png"] tag:1003];
+    NSMutableArray *sgItems = [[NSMutableArray alloc]initWithCapacity:marray.count];
+    for (int i = 0; i < marray.count; i ++) {
+        NSURL *url = [NSURL URLWithString:[marray objectAtIndex:i]];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+//        SDWebImageManager *sdManager = [SDWebImageManager sharedManager];
+        
+        SGFocusImageItem *item = [[SGFocusImageItem alloc] initWithTitle:nil image:image tag:(1000+i)];
+        [sgItems addObject:item];
+    }
     
-    SGFocusImageFrame *imageFrame = [[SGFocusImageFrame alloc] initWithFrame:CGRectMake(0, 64 - OriginY(), ScreenWidth, 122) delegate:self focusImageItems:item1,item2,item3, nil];
+    SGFocusImageFrame *imageFrame = [[SGFocusImageFrame alloc]initWithFrame:CGRectMake(0,0, ScreenWidth, 112) delegate:self focusImageItemsArrray:sgItems];
     imageFrame.switchTimeInterval = 5.f;
     
     
@@ -65,9 +82,11 @@
         [imageFrame removeFromSuperview];
     }
 }
+
+#pragma mark - load data
 -(void)setupMainView
 {
-    NSArray *dataArray = [self requestJSON:@"http://time61/api/newsays.php"];
+    NSArray *dataArray = [WebRequest requestJSON:@"http://time61/api/newsays.php"];
  
     NSMutableArray *newsayArray = [[NSMutableArray alloc] initWithCapacity:dataArray.count];
     for (NSDictionary  *newsayDic  in dataArray) {
@@ -77,6 +96,7 @@
         
     }
     self.data = newsayArray;
+    [self.tableView reloadData];
   /*
 //    NSLog(@"self.data:%@",self.data);
 //    UINib *CartonCellNib = [UINib nibWithNibName:@"CartonCell" bundle:nil];
@@ -108,38 +128,20 @@
         cell = [[NewsayTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:newsaycell];
     }
     NewsayModel *newsayModel = [self.data objectAtIndex:indexPath.row];
-    cell.newsayModel = newsayModel;
+    cell.newsayModel = [newsayModel copy];
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    TIMENewsayDetailViewController *detail = [[TIMENewsayDetailViewController alloc] init];
-    
     TIMENewsayDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"newsayDetailVC"];
     
     detail.newsayModel = [self.data objectAtIndex:indexPath.row];
     
     [self.navigationController pushViewController:detail animated:YES];
-}
-
-//
-#pragma mark - load data
-
--(id)requestJSON:(NSString *)urlString
-{
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSError *error;
-    id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    if (error) {
-        NSLog(@"%@",error);
-    }
-    if (json == nil) {
-        return nil;
-    }
-    return json;
+    
+//    [self performSegueWithIdentifier:@"goNewsayDetail" sender:nil];
 }
 
 @end

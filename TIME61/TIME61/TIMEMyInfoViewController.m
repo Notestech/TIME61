@@ -8,7 +8,6 @@
 
 #import "TIMEMyInfoViewController.h"
 #import "TIMELoginViewController.h"
-#import "UIImage+WebCache.h"
 
 @interface TIMEMyInfoViewController ()
 
@@ -20,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.title = @"个人信息";
     }
     return self;
 }

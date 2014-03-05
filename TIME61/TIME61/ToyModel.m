@@ -22,4 +22,15 @@
     [super setAttribbutes:dataDic];
     
 }
+
+-(id)copyWithZone:(NSZone *)zone
+{
+    ToyModel *copy = [super copyWithZone:zone];
+    copy.owner = _owner;
+    copy.paintURL = _paintURL;
+    copy.toyURL = _toyURL;
+    
+    return copy;
+}
+
 @end

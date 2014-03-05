@@ -10,6 +10,7 @@
 
 @implementation BaseModel
 
+
 -(id)initWithDataDic:(NSDictionary *)dataDic;
 {
     if (self = [super init]) {
@@ -174,4 +175,12 @@
     return [super respondsToSelector:aSelector];
 }
 #endif
+
+#pragma -协议方法
+- (id)copyWithZone:(NSZone *)zone
+{
+    BaseModel *copy = [[self class]allocWithZone:zone];
+    return copy;
+}
+
 @end

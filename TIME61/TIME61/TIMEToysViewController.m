@@ -56,8 +56,8 @@
     if (ctCell == nil) {
         ctCell = [[TIMECustomToyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
-    ctCell.toyModel = [self.data objectAtIndex:indexPath.row];
+    ToyModel *toyModel = [self.data objectAtIndex:indexPath.row];
+    ctCell.toyModel = [toyModel copy];
     
     return ctCell;
 }

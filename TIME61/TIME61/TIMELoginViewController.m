@@ -10,6 +10,7 @@
 #import "TIMEMyPageViewController.h"
 #import "TIMERegisterViewController.h"
 #import "WebRequest.h"
+#import "UserManager.h"
 
 @interface TIMELoginViewController ()
 
@@ -30,12 +31,15 @@
 {
     [super viewDidLoad];
     
+    self.loginView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
+    
+    [_pwdText setSecureTextEntry:YES];
     NSArray *array = [[NSArray alloc]init];
     if ((array= [[NSUserDefaults standardUserDefaults]objectForKey:@"userinfo"])) {
-        NSLog(@"%@",array);
         _nameText.text = [array objectAtIndex:0];
         _pwdText.text = [array objectAtIndex:1];
     }
+    
     
 }
 
@@ -46,7 +50,6 @@
     NSString *urlSting = @"http://time61/user/signin.php";
     //设置请求参数
     NSString *parameters = [NSString stringWithFormat:@"name=%@&pwd=%@",_nameText.text,_pwdText.text];
-    
     /*
     NSURL *url = [[NSURL alloc] initWithString:@"http://time61/user/signin.php"];
     //创建请求
@@ -58,34 +61,32 @@
     //链接服务器
     NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     */
-    
-    NSData *received = [WebRequest requestInPOST:urlSting parameters:parameters];
-    
-    
+    NSData *received = [WebRequest requestURL:urlSting inMethod:@"POST" parameters:parameters];
+
     NSString *receiveStr = [[NSString alloc] initWithData:received encoding:NSUTF8StringEncoding];
     
-    NSLog(@"登录:%@",receiveStr);
     
     if ([receiveStr isEqualToString:@"YES"]) {
-        
-        TIMEMyPageViewController *myPage = [self.storyboard instantiateViewControllerWithIdentifier:@"mypageVC"];
-        
-        [self.navigationController pushViewController:myPage animated:YES];
-        
         //保存用户名和密码
+        UserManager *userManager = [UserManager shareInstance];
+        [userManager setUserName:_nameText.text];
+        [userManager setUserPassword:_pwdText.text];
+        
         if (_rememberme.isOn) {
-            NSArray *userArray = [NSArray arrayWithObjects:_nameText.text,_pwdText.text, nil];
-            [[NSUserDefaults standardUserDefaults]setObject:userArray forKey:@"userinfo"];
+            
+            [userManager setIsRememberMe:YES];
         }
+        [[NSNotificationCenter defaultCenter]postNotificationName:kUserDidLoginNotification object:nil];
+        [self.navigationController popViewControllerAnimated:YES];
     }else{
         _warnText.text = @"用户名或密码错误!";
     }
 }
 
 
-#pragma mark - 注册
+#pragma mark - go注册
 - (IBAction)signUpAction:(id)sender {
-    TIMERegisterViewController *regvc = [self.storyboard instantiateViewControllerWithIdentifier:@"registerVC"];
-    [self.navigationController pushViewController:regvc animated:YES];
+    
+    [self performSegueWithIdentifier:@"goRegister" sender:nil];
 }
 @end

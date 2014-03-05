@@ -10,10 +10,11 @@
 
 @interface TIMELoginViewController : BaseViewController
 
+@property (weak, nonatomic) IBOutlet UIView *loginView;
 @property(strong,nonatomic)IBOutlet UITextField *nameText;
 @property(strong,nonatomic)IBOutlet UITextField *pwdText;
-@property(strong,nonatomic)IBOutlet UIButton    *signInText;
-@property(strong,nonatomic)IBOutlet UIButton    *signUpText;
+@property(strong,nonatomic)IBOutlet UIButton    *signInButton;
+@property(strong,nonatomic)IBOutlet UIButton    *signUpButton;
 @property(strong,nonatomic)IBOutlet UILabel    *warnText;
 @property (weak, nonatomic) IBOutlet UISwitch *rememberme;
 

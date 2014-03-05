@@ -12,13 +12,13 @@
 
 @interface ThemeManager : NSObject
 
-@property(nonatomic)NSString    *themeName;
-@property(nonatomic)NSDictionary    *themePlist;
-@property(nonatomic)NSDictionary    *fontColorPlist;
+@property(nonatomic,retain)NSString    *themeName;
+@property(nonatomic,retain)NSDictionary    *themePlist;
+@property(nonatomic,retain)NSDictionary    *fontColorPlist;
 
 +(ThemeManager *)shareInstance;
 
--(UIImage *)getImageWithName:(NSString *)imageName;
+-(UIImage *)getThemeImage:(NSString *)imageName;
 -(UIColor *)getColorWithName:(NSString *)colorName;
 
 @end

@@ -60,7 +60,7 @@ static ThemeManager *singleton = nil;
 }
 
 //获取当前主题下 图片名对应的 UIImage
--(UIImage *)getImageWithName:(NSString *)imageName
+-(UIImage *)getThemeImage:(NSString *)imageName
 {
     if (imageName == nil) {
         nil;
@@ -91,6 +91,21 @@ static ThemeManager *singleton = nil;
         return color;
     }
     return nil;
+}
+
+#pragma mark -sigleton setting
++(id)allocWithZone:(NSZone *)zone
+{
+    @synchronized(self){
+        if (singleton == nil) {
+            singleton = [super allocWithZone:zone];
+        }
+    }
+    return singleton;
+}
++(id)copyWithZone:(NSZone *)zone
+{
+    return self;
 }
 
 @end

@@ -18,7 +18,7 @@
     UILabel *_userLable;
     UILabel *_timeLable;
     UILabel *_sayLable;
-    
+    UIImageView *_paintImageView;
 }
 
 @property(nonatomic)NewsayModel *newsayModel;

@@ -12,7 +12,8 @@
 
 
 @property(nonatomic)NSString *sayID;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UITextView *relpayTextView;
-@property (weak, nonatomic) IBOutlet UIView *toolBarView;
+@property (weak, nonatomic) IBOutlet UIView *toolsBarView;
 
 @end

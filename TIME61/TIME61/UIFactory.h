@@ -13,14 +13,15 @@
 
 @interface UIFactory : NSObject
 
-//创建ThemeButton
-+(ThemeButton *)createButtonWithImage:(NSString *)imageName highlighted:(NSString *)highlightedName;
+//创建 ThemeButton
++(ThemeButton *)createButton:(NSString *)imageName highlighted:(NSString *)highlightedName;
++(ThemeButton *)createButtonWithBackground:(NSString *)backgroundImageName backgroundHighlighted:(NSString *)backgroundHighlightedName;
 
+//创建 ThemeImageView
 +(ThemeImageView *)createImageView:(NSString *)imageName;
 
-//+(ThemeLable *)createLable:()
-//+(UIButton *)createNavigationButton:(CGRect *)frame
-//                              title:(NSString *)title
-//                             target:(id)target
-//                             action:(SEL)action;
+//创建 ThemeLable
++(ThemeLable *)createLable:(NSString *)colorName;
+
+
 @end

@@ -8,12 +8,12 @@
 #import "NewsayTableCell.h"
 #import "NewsayModel.h"
 #import "ReplayModel.h"
-#import "UIImage+WebCache.h"
+#import "UIImageView+WebCache.h"
 #import "TIMENewsayDetailViewController.h"
 
 #define LIST_FONT           14.0f
 #define DETAIL_FONT         16.0f
-#define NEWSAY_WIDTH        (320-60)   //头像视图的宽度
+#define NEWSAY_WIDTH        (320-70)   //头像视图的宽度
 
 @implementation NewsayTableCell
 
@@ -58,6 +58,13 @@
     _sayLable.numberOfLines = 100;
     [self.contentView addSubview:_sayLable];
     
+    //图片
+    _paintImageView = [[UIImageView alloc]initWithFrame:CGRectZero];
+    _paintImageView.backgroundColor = [UIColor clearColor];
+    _paintImageView.layer.cornerRadius = 5;
+    _paintImageView.layer.masksToBounds = YES;
+    [self.contentView addSubview:_paintImageView];
+    
 }
 
 -(void)layoutSubviews
@@ -65,26 +72,35 @@
     [super layoutSubviews];
     
     _touView.frame = CGRectMake(5, 0, 50, 50);
-    _touView.image = [UIImage imageWithURL:_newsayModel.owner.tou];
+    [_touView setImageWithURL:[NSURL URLWithString:_newsayModel.owner.tou]];
     
-    _userLable.frame = CGRectMake(70, 5, 130, 20);
+    _userLable.frame = CGRectMake(65, 5, 130, 20);
     _userLable.text = _newsayModel.owner.name;
     
     
-    _sayLable.frame = CGRectMake(70 , 20 + 10, NEWSAY_WIDTH - 15, 20);
+    _sayLable.frame = CGRectMake(65 , 20 + 10, NEWSAY_WIDTH, 20);
     _sayLable.text = _newsayModel.content;
     
-    
+    //详请页
     if (_isDetail == YES && _isReplay == NO) {
         _sayLable.font = [UIFont systemFontOfSize:DETAIL_FONT];
         CGSize size = [_sayLable getSize];
-        _sayLable.frame = CGRectMake(70, 20 + 10, size.width, size.height);
+        _sayLable.frame = CGRectMake(65, 20 + 10, size.width, size.height);
         
-        _timeLable.frame = CGRectMake(190, 30 + _sayLable.frame.size.height + 10, NEWSAY_WIDTH - 105 , 10);
+        //图片
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:_newsayModel.paintImageURL]];
+        UIImage *image = [UIImage imageWithData:imageData];
+        _paintImageView.image = image;
+        _paintImageView.frame = CGRectMake(65, 30 + _sayLable.frame.size.height, NEWSAY_WIDTH, image.size.height);
+        
+        //时间
+        _timeLable.frame = CGRectMake(195, 30 + _sayLable.frame.size.height + 10 +_paintImageView.size.height, NEWSAY_WIDTH - 120 , 10);
         _timeLable.text = _newsayModel.time;
         
-    }else if (_isDetail == YES && _isReplay == YES){
-        _touView.image = [UIImage imageWithURL:_replayModel.owner.tou];
+    }
+    //回复
+    else if (_isDetail == YES && _isReplay == YES){
+        [_touView setImageWithURL:[NSURL URLWithString:_replayModel.owner.tou]];
         
         _userLable.text = _replayModel.owner.name;
         
@@ -94,13 +110,14 @@
         _sayLable.text = _replayModel.content;
         
         CGSize size = [_sayLable getSize];
-        _sayLable.frame = CGRectMake(70, 20 + 10, size.width, size.height);
+        _sayLable.frame = CGRectMake(65, 20 + 10, size.width, size.height);
         
         
-        _timeLable.frame = CGRectMake(190, 30 + _sayLable.frame.size.height + 10, NEWSAY_WIDTH - 105, 10);
-        _timeLable.text = _newsayModel.time;
+        _timeLable.frame = CGRectMake(195, 30 + size.height + 10, NEWSAY_WIDTH - 120, 10);
+        _timeLable.text = _replayModel.time;
+        
     }else{
-        _timeLable.frame = CGRectMake(190, 5, NEWSAY_WIDTH - 105, 20);
+        _timeLable.frame = CGRectMake(195, 5, NEWSAY_WIDTH - 120, 20);
         _timeLable.text = _newsayModel.time;
     }
     
@@ -125,10 +142,11 @@
 +(CGFloat)getNewsayViewHeight:(NewsayModel *)newsayModel
                      isDetail:(BOOL)isDetail
 {
-    CGFloat height = 50.0f;
+    CGFloat height = 44.0f;
 
     if (isDetail == YES) {
-        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, NEWSAY_WIDTH - 15, 100)];
+        
+        UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, NEWSAY_WIDTH, 20)];
         lable.font = [UIFont systemFontOfSize:[self getFontSize:YES]];
         lable.text = newsayModel.content;
         
@@ -136,22 +154,27 @@
 
         height += size.height;
         
+        //图片
+        NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:newsayModel.paintImageURL]];
+        UIImage *image = [UIImage imageWithData:imageData];
+        height += image.size.height;
         height += 10;
     }
     return height;
 }
 +(CGFloat)getReplayViewHeight:(ReplayModel *)replayModel
 {
-    CGFloat height = 50.0f;
+    CGFloat height = 44.0f;
     
-    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, NEWSAY_WIDTH - 15, 100)];
+    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, NEWSAY_WIDTH , 100)];
     lable.font = [UIFont systemFontOfSize:[self getFontSize:YES]];
     lable.text = replayModel.content;
     
     CGSize size = [lable getSize];
         
     height += size.height;
-    height += 20;
+    height += 10;
+    
     return height;
 }
 @end

@@ -10,4 +10,8 @@
 
 @interface ThemeLable : UILabel
 
+@property(nonatomic,copy)NSString *colorName;
+
+-(id)initWithColorName:(NSString *)colorName;
+
 @end

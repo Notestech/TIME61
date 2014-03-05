@@ -25,4 +25,16 @@
     [super setAttribbutes:dataDic];
 }
 
+-(id)copyWithZone:(NSZone *)zone
+{
+    PaintsModel *copy = [super copyWithZone:zone];
+    copy.paintsURL = _paintsURL;
+    copy.owner = _owner;
+    copy.title = _title;
+    copy.share = _share;
+    copy.comment = _comment;
+    copy.love = _love;
+    
+    return copy;
+}
 @end

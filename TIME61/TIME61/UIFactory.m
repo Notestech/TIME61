@@ -11,21 +11,27 @@
 
 @implementation UIFactory
 
-+(ThemeButton *)createButtonWithImage:(NSString *)imageURL highlighted:(NSString *)highlightedURL
+//创建 ThemeButton
++(ThemeButton *)createButton:(NSString *)imageName highlighted:(NSString *)highlightedName
 {
-    return [[ThemeButton alloc]init];
-}
-+(ThemeImageView *)createImageView:(NSString *)imageName
-{
-    return [[ThemeImageView alloc]init];
+    return [[ThemeButton alloc]initWithImage:imageName highlighted:highlightedName];
 }
 
-//+(UIButton *)createNavigationButton:(CGRect *)frame
-//                              title:(NSString *)title
-//                             target:(id)target
-//                             action:(SEL)action
-//{
-//    UIButton *btn = [[UIButton alloc]init];
-//    return btn;
-//}
++(ThemeButton *)createButtonWithBackground:(NSString *)backgroundImageName backgroundHighlighted:(NSString *)backgroundHighlightedName
+{
+    return [[ThemeButton alloc]initWithBackground:backgroundImageName highlightedBackground:backgroundHighlightedName];
+}
+
+//创建 ThemeImageView
++(ThemeImageView *)createImageView:(NSString *)imageName
+{
+    return [[ThemeImageView alloc]initWithImage:imageName];
+}
+
+//创建 ThemeLable
++(ThemeLable *)createLable:(NSString *)colorName
+{
+    return [[ThemeLable alloc]initWithColorName:colorName];
+}
+
 @end

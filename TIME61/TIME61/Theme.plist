@@ -4,7 +4,9 @@
 <dict>
 	<key>default</key>
 	<string></string>
-	<key>New item</key>
-	<string>skin/newitem</string>
+	<key>white</key>
+	<string>skin/white</string>
+	<key>cyan</key>
+	<string>skin/cyan</string>
 </dict>
 </plist>

@@ -28,4 +28,15 @@
         self.owner = user;
     }
 }
+
+-(id)copyWithZone:(NSZone *)zone
+{
+    ReplayModel *copy = [super copyWithZone:zone];
+    copy.owner = _owner;
+    copy.time = _time;
+    copy.content = _content;
+    
+    return copy;
+}
+
 @end

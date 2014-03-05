@@ -7,12 +7,19 @@
 //
 
 #import "BaseNavigationController.h"
+#import "ThemeManager.h"
+
 
 @interface BaseNavigationController ()
 
 @end
 
 @implementation BaseNavigationController
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,11 +29,22 @@
     }
     return self;
 }
+-(void)themeNotification
+{
+    [self loadThemeView];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavigationBar_background"] forBarMetrics:UIBarMetricsDefault];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(themeNotification) name:kThemeChangedNofication object:nil];
+    [self loadThemeView];
+}
+
+-(void)loadThemeView
+{
+    UIImage *backImage = [[ThemeManager shareInstance]getThemeImage:@"navbar_background.png"];
+    [self.navigationBar setBackgroundImage:backImage forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)didReceiveMemoryWarning

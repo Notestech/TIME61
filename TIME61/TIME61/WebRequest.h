@@ -11,5 +11,7 @@
 @interface WebRequest : NSObject
 
 +(id)requestJSON:(NSString *)urlString;
-+(NSData *)requestInPOST:(NSString *)urlString parameters:(NSString *)parameters;
+
++(NSData *)requestURL:(NSString *)urlString inMethod:(NSString *)method parameters:(NSString *)parameters;
+
 @end

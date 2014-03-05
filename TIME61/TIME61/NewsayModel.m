@@ -13,7 +13,8 @@
 -(NSDictionary *)attributeMapDictionary{
     NSDictionary *attrMap = @{@"sayID":@"sayID",
                               @"time":@"time",
-                              @"content":@"content"
+                              @"content":@"content",
+                              @"paintImageURL":@"imageURL"
                               };
     return attrMap;
 }
@@ -27,6 +28,17 @@
         UserModel *user = [[UserModel alloc]initWithDataDic:userDic];
         self.owner = user;
     }
+}
+
+-(id)copyWithZone:(NSZone *)zone
+{
+    NewsayModel *copy = [super copyWithZone:zone];
+    copy.sayID = _sayID;
+    copy.owner = _owner;
+    copy.time = _time;
+    copy.content = _content;
+    copy.paintImageURL = _paintImageURL;
+    return copy;
 }
 
 @end

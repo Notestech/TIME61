@@ -8,7 +8,7 @@
 
 #import "PaintCollectionCell.h"
 #import "PaintsModel.h"
-#import "UIImage+WebCache.h"
+#import "UIImageView+WebCache.h"
 #import "UIViewExt.h"
 
 @implementation PaintCollectionCell
@@ -51,7 +51,7 @@
 {
     //绘画视图
     _paintsView.frame = CGRectMake(0, 0, 100, 160);
-    _paintsView.image = [UIImage imageWithURL:_paintsModel.paintsURL];
+    [_paintsView setImageWithURL:[NSURL URLWithString:_paintsModel.paintsURL]];
     
     //作者
     _ownerLable.frame = CGRectMake(0, 160, 100, 28);

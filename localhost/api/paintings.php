@@ -25,6 +25,12 @@ while ($result = mysql_fetch_array($req)){
 }
 
 echo json_encode($paintings);
+
+
+// echo('{"paintingURL":"http:\/\/time61\/upload\/painting\/painting_0002.png","title":"Cat","owner":"Max","share_count":"0","comment_count":"0","love_count":"0"}');
+
+
+
 // echo array_to_json_string($paintings);
 
 // echo "<pre>";

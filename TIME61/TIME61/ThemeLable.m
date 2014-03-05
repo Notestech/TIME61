@@ -7,25 +7,57 @@
 //
 
 #import "ThemeLable.h"
+#import "ThemeManager.h"
 
 @implementation ThemeLable
 
-- (id)initWithFrame:(CGRect)frame
+-(id)initWithColorName:(NSString *)colorName
 {
-    self = [super initWithFrame:frame];
+    self = [self init];
     if (self) {
-        // Initialization code
+        self.colorName = colorName;
     }
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+-(void)awakeFromNib
 {
-    // Drawing code
+    [super awakeFromNib];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(themeNotification:) name:kThemeChangedNofication object:nil];
 }
-*/
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(themeNotification:) name:kThemeChangedNofication object:nil];
+    }
+    return self;
+}
+
+#pragma -setter
+-(void)setColorName:(NSString *)colorName
+{
+    if (_colorName != colorName) {
+        _colorName = [colorName copy];
+    }
+    [self setColor];
+}
+
+-(void)setColor
+{
+    if (self.colorName == nil) {
+        return;
+    }
+    
+    UIColor *textColor = [[ThemeManager shareInstance]getColorWithName:_colorName];
+    self.textColor = textColor;
+}
+
+-(void)themeNotification:(NSNotification *)notification
+{
+    [self setColor];
+}
 
 @end

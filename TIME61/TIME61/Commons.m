@@ -11,9 +11,9 @@
 CGFloat OriginY()
 {
     if (IOS7_OR_LATER) {
-        return 0;
+        return 64;
     }
-    return 20;
+    return 64;
 }
 
 CGRect AppBounds()
