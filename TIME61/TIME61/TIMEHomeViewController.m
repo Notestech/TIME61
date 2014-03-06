@@ -141,7 +141,6 @@
     
     [self.navigationController pushViewController:detail animated:YES];
     
-//    [self performSegueWithIdentifier:@"goNewsayDetail" sender:nil];
 }
 
 @end

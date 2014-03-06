@@ -21,6 +21,6 @@
 
 
 +(UserManager *)shareInstance;
-
+-(BOOL)isLogin;
 -(void)clearUserInfo;
 @end

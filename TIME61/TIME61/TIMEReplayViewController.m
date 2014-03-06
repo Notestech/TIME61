@@ -29,9 +29,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title =@"发表评论";
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     }
     return self;
 }
@@ -39,6 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title =@"发表评论";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowNotification:) name:UIKeyboardWillShowNotification object:nil];
     //取消回复按钮
     UIBarButtonItem *btn1 = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(cancleReplay)];
     self.navigationItem.leftBarButtonItem = btn1;
@@ -46,9 +47,7 @@
     UIBarButtonItem *btn2 = [[UIBarButtonItem alloc]initWithTitle:@"确定" style:UIBarButtonItemStyleBordered target:self action:@selector(confirmReplay)];
     self.navigationItem.rightBarButtonItem = btn2;
     
-//    if (IOS7_OR_LATER) {
-//        self.containerView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight);
-//    }
+
     
     [self _initToolsBarView];
     [_relpayTextView becomeFirstResponder];
@@ -57,15 +56,15 @@
 
 -(void)_initToolsBarView
 {
-    NSArray *images = @[@"compose_locatebutton_background",
-                        @"compose_emoticonbutton_background",
-                        @"compose_camerabutton_background"];
-    NSArray *lightImages = @[@"compose_locatebutton_background_highlighted",
-                             @"compose_emoticonbutton_background_highlighted",
-                             @"compose_camerabutton_background_highlighted"];
+    NSArray *images = @[@"compose_locatebutton_background.png",
+                        @"compose_emoticonbutton_background.png",
+                        @"compose_camerabutton_background.png"];
+    NSArray *lightImages = @[@"compose_locatebutton_background_highlighted.png",
+                             @"compose_emoticonbutton_background_highlighted.png",
+                             @"compose_camerabutton_background_highlighted.png"];
     for (int i=0; i<images.count; i++) {
         UIButton *button = [UIFactory createButton:[images objectAtIndex:i] highlighted:[lightImages objectAtIndex:i]];
-        button.frame = CGRectMake(10 + i*23 +i*10, (40-19)/2, 23, 19);
+        button.frame = CGRectMake(10 + i*23 +i*40, (40-19)/2, 23, 19);
         button.tag = 1100+i;
         [button targetForAction:@selector(toolAction:) withSender:button];
         [_toolsBarView addSubview:button];
@@ -119,7 +118,8 @@
     if (![resultString isEqualToString:@"0"]) {
         [[NSNotificationCenter defaultCenter]postNotificationName:@"kReplaySuccessed" object:resultString];
         
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
     }else{
         [ProgressHUD showError:@"添加评论失败"];
     }

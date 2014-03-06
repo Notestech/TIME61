@@ -127,36 +127,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="Sqq-zd-F3z">
-                                <rect key="frame" x="0.0" y="64" width="320" height="453"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5kf-1C-SYP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5kf-1C-SYP">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="viM-Ig-NAF" id="QtI-XV-Yo4"/>
-                                        </connections>
-                                    </textView>
-                                    <view contentMode="scaleToFill" id="ibF-X2-0dE">
-                                        <rect key="frame" x="0.0" y="190" width="320" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="viM-Ig-NAF" id="QtI-XV-Yo4"/>
+                                </connections>
+                            </textView>
+                            <view contentMode="scaleToFill" id="ibF-X2-0dE">
+                                <rect key="frame" x="0.0" y="180" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SnL-p3-udg"/>
                     <connections>
-                        <outlet property="containerView" destination="Sqq-zd-F3z" id="WZZ-t9-gib"/>
                         <outlet property="relpayTextView" destination="5kf-1C-SYP" id="vmD-Xb-25o"/>
-                        <outlet property="toolBarView" destination="ibF-X2-0dE" id="is8-kJ-xGs"/>
+                        <outlet property="toolsBarView" destination="ibF-X2-0dE" id="B4c-dL-EXo"/>
                         <segue destination="N4a-Ic-CCm" kind="push" identifier="goToLogin" id="Uql-Zg-5w9"/>
                     </connections>
                 </viewController>
@@ -262,14 +254,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="O8E-J0-i4w">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" id="KoZ-xg-ZZH">
-                                <rect key="frame" x="0.0" y="190" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="180" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>

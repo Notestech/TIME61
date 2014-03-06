@@ -122,7 +122,7 @@
     //[ShareSDK imageWithUrl:_paintsModel.paintsURL]
     id<ISSContent> shareContent = [ShareSDK content:_newsayModel.content
                                      defaultContent:@"此消息来自TIME61"
-                                              image:nil
+                                              image:[ShareSDK imageWithUrl:_newsayModel.paintImageURL]
                                               title:@""
                                                 url:@"http://time61"
                                         description:@""

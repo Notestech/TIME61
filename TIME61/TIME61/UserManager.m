@@ -69,8 +69,18 @@ static UserManager *singleton = nil;
     
     
 }
+-(BOOL)isLogin
+{
+    NSArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"];
+    if (array != nil) {
+        return YES;
+    }
+    return NO;
+}
+
 -(void)clearUserInfo
 {
     [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"userinfo"];
 }
+
 @end

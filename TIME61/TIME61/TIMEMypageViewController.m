@@ -36,7 +36,7 @@
     
     self.navigationItem.backBarButtonItem = nil;
     
-	NSArray *section1 = @[@"个人信息",@"登录",@"注销"];
+	NSArray *section1 = @[@"个人信息",@"登录"];
     NSArray *section2 = @[@"我的画册",@"发表图画作品",@"订单管理"];
     NSArray *section3 = @[@"主题"];
     self.data = [[NSArray alloc] initWithObjects:section1,section2,section3, nil];
@@ -59,34 +59,18 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
-    if (indexPath.row == 0) {
-        //        UIImageView *userTou = [[UIImageView alloc] initWithImage:[UIImage imageWithURL:@""]];
-    }
-    if (indexPath.section == 0 && indexPath.row == 2) {
-        
+    
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        if ([[UserManager shareInstance] isLogin]) {
+            cell.textLabel.text = @"注销";
+            return cell;
+        }
     }
     NSArray *sectionArray = [self.data objectAtIndex:indexPath.section];
     cell.textLabel.text = [sectionArray objectAtIndex:indexPath.row];
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0) {
-        if (indexPath.row == 1) {
-            NSArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"];
-            if (array != nil) {
-                return 0;
-            }
-        }else if(indexPath.row == 2){
-            NSArray *array = [[NSUserDefaults standardUserDefaults] objectForKey:@"userinfo"];
-            if (array == nil) {
-                return 0;
-            }
-        }
-    }
-    return 44.0f;
-}
 
 #pragma mark- UITableViewDelegate Method
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,15 +80,17 @@
         if (indexPath.row == 0) {
             [self performSegueWithIdentifier:@"goMyInfo" sender:nil];
         }
-        //登录
+        //登录 注销
         else if (indexPath.row == 1) {
-            [self performSegueWithIdentifier:@"fromMypageToLogin" sender:nil];
-        }
-        //注销
-        else if (indexPath.row == 2){
+            if (![[UserManager shareInstance] isLogin]){
+                [self performSegueWithIdentifier:@"fromMypageToLogin" sender:nil];
+                return;
+            }
+            
             [[UserManager shareInstance]clearUserInfo];
             [_tableView reloadData];
         }
+    
     }else if (indexPath.section == 1){
         
         if (indexPath.row == 0) {
@@ -123,14 +109,6 @@
         
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0 && indexPath.row == 3) {
-        return UITableViewCellEditingStyleDelete;
-    }
-    
-    return UITableViewCellEditingStyleNone;
-}
 
 -(void)hideLoginCell
 {

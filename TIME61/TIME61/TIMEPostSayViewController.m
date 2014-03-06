@@ -30,8 +30,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"发表图画作品";
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+        
     }
     return self;
 }
@@ -39,6 +38,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"发表图画作品";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShowNotification:) name:UIKeyboardWillShowNotification object:nil];
+    
 	//取消回复按钮
     UIBarButtonItem *btn1 = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(canclePost)];
     self.navigationItem.leftBarButtonItem = btn1;
@@ -53,15 +56,15 @@
 
 -(void)_initToolsBarView
 {
-    NSArray *images = @[@"compose_locatebutton_background",
-                        @"compose_emoticonbutton_background",
-                        @"compose_camerabutton_background"];
-    NSArray *lightImages = @[@"compose_locatebutton_background_highlighted",
-                             @"compose_emoticonbutton_background_highlighted",
-                             @"compose_camerabutton_background_highlighted"];
+    NSArray *images = @[@"compose_locatebutton_background.png",
+                        @"compose_emoticonbutton_background.png",
+                        @"compose_camerabutton_background.png"];
+    NSArray *lightImages = @[@"compose_locatebutton_background_highlighted.png",
+                             @"compose_emoticonbutton_background_highlighted.png",
+                             @"compose_camerabutton_background_highlighted.png"];
     for (int i=0; i<images.count; i++) {
         UIButton *button = [UIFactory createButton:[images objectAtIndex:i] highlighted:[lightImages objectAtIndex:i]];
-        button.frame = CGRectMake(10 + i*23 +i*10, (40-19)/2, 23, 19);
+        button.frame = CGRectMake(10 + i*23 +i*40, (40-19)/2, 23, 19);
         
         [_toolsBarView addSubview:button];
     }
@@ -85,7 +88,7 @@
     
     NSString *postContent = _postTextView.text;
     if ([postContent isEqualToString:@""]) {
-        [ProgressHUD showError:@"请添加一些评论内容"];
+        [ProgressHUD showError:@"请添加一些内容"];
         return;
     }
     
